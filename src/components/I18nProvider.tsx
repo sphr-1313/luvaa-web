@@ -8,6 +8,7 @@ type Translations = Record<string, any>;
 const translations: Record<Locale, Translations> = {
   en: {
     nav: {
+      home: "Home",
       features: "Features",
       pricing: "Pricing",
       blog: "Blog",
@@ -202,6 +203,7 @@ const translations: Record<Locale, Translations> = {
   },
   nl: {
     nav: {
+      home: "Home",
       features: "Functies",
       pricing: "Prijzen",
       blog: "Blog",
@@ -396,6 +398,7 @@ const translations: Record<Locale, Translations> = {
   },
   de: {
     nav: {
+      home: "Startseite",
       features: "Funktionen",
       pricing: "Preise",
       blog: "Blog",
@@ -590,6 +593,7 @@ const translations: Record<Locale, Translations> = {
   },
   fr: {
     nav: {
+      home: "Accueil",
       features: "Fonctionnalités",
       pricing: "Tarifs",
       blog: "Blog",
@@ -784,6 +788,7 @@ const translations: Record<Locale, Translations> = {
   },
   tr: {
     nav: {
+      home: "Ana Sayfa",
       features: "Özellikler",
       pricing: "Fiyatlandırma",
       blog: "Blog",

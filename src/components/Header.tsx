@@ -33,6 +33,7 @@ export default function Header() {
           <img src="/luvaa-icon.svg" alt="Luvaa" className="h-10" />
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm">
+          <a href="/" className={linkClass('/')} aria-current={pathname === '/' ? 'page' : undefined}>{t('nav.home')}</a>
           <a href="/pricing" className={linkClass('/pricing')} aria-current={pathname === '/pricing' ? 'page' : undefined}>{t('nav.pricing')}</a>
           <a href="/blog" className={linkClass('/blog')} aria-current={pathname === '/blog' ? 'page' : undefined}>{t('nav.blog')}</a>
           <a href="/about" className={linkClass('/about')} aria-current={pathname === '/about' ? 'page' : undefined}>{t('nav.about')}</a>
@@ -93,6 +94,7 @@ export default function Header() {
       {open && (
         <div className="md:hidden absolute right-6 top-full mt-2 w-[220px] bg-white border border-gray-100 rounded-lg shadow-lg z-50">
           <div className="flex flex-col p-3">
+            <a href="/" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/')}`}>{t('nav.home')}</a>
             <a href="/pricing" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/pricing')}`}>{t('nav.pricing')}</a>
             <a href="/blog" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/blog')}`}>{t('nav.blog')}</a>
             <a href="/about" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/about')}`}>{t('nav.about')}</a>
