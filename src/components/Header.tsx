@@ -40,7 +40,7 @@ export default function Header() {
           <a href="/careers" className={linkClass('/careers')} aria-current={pathname === '/careers' ? 'page' : undefined}>{t('nav.careers')}</a>
         </nav>
         <div className="flex items-center gap-3">
-          <a href="https://app.luvaa.app" className="bg-[#ed754f] text-white px-4 py-2 rounded-full text-sm">{t('cta.tryOnWeb')}</a>
+
 
           {/* Language selector for desktop - custom dropdown with flags */}
           <div ref={langRef} className="hidden md:block relative">
