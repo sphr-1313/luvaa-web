@@ -2,13 +2,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useI18n } from './I18nProvider';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname() || '/';
   const [open, setOpen] = useState(false);
   const { t, locale, setLocale, availableLocales } = useI18n();
   const [langOpen, setLangOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const langRef = useRef<HTMLDivElement | null>(null);
+
+  // Track scroll for header background
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
@@ -25,89 +36,193 @@ export default function Header() {
       document.removeEventListener('keydown', onKey);
     };
   }, []);
-  const linkClass = (href: string) => `inline-block pb-1 border-b-2 ${pathname === href ? 'border-[#ec547c] text-[#ec547c]' : 'border-transparent text-gray-700'} transition-colors`;
+
+  const navLinks = [
+    { href: '/', label: t('nav.home') },
+    { href: '/pricing', label: t('nav.pricing') },
+    { href: '/blog', label: t('nav.blog') },
+    { href: '/about', label: t('nav.about') },
+    { href: '/careers', label: t('nav.careers') },
+  ];
+
+  const flags: Record<string, string> = {
+    en: '🇬🇧',
+    nl: '🇳🇱',
+    de: '🇩🇪',
+    fr: '🇫🇷',
+    tr: '🇹🇷',
+  };
+
   return (
-    <header className="w-full bg-white/80 border-b border-gray-100 fixed top-0 left-0 right-0 z-50 backdrop-blur">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3">
-          <img src="/luvaa-icon.svg" alt="Luvaa" className="h-10" />
-        </a>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <a href="/" className={linkClass('/')} aria-current={pathname === '/' ? 'page' : undefined}>{t('nav.home')}</a>
-          <a href="/pricing" className={linkClass('/pricing')} aria-current={pathname === '/pricing' ? 'page' : undefined}>{t('nav.pricing')}</a>
-          <a href="/blog" className={linkClass('/blog')} aria-current={pathname === '/blog' ? 'page' : undefined}>{t('nav.blog')}</a>
-          <a href="/about" className={linkClass('/about')} aria-current={pathname === '/about' ? 'page' : undefined}>{t('nav.about')}</a>
-          <a href="/careers" className={linkClass('/careers')} aria-current={pathname === '/careers' ? 'page' : undefined}>{t('nav.careers')}</a>
-        </nav>
-        <div className="flex items-center gap-3">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100'
+          : 'bg-transparent'
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18 py-4">
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-2 group">
+            <img
+              src="/luvaa-icon.svg"
+              alt="Luvaa"
+              className="h-10 group-hover:scale-105 transition-transform duration-200"
+            />
+          </a>
 
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
+                      ? 'text-[#ec547c]'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/80'
+                    }`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#ec547c]" />
+                  )}
+                </a>
+              );
+            })}
+          </nav>
 
-          {/* Language selector for desktop - custom dropdown with flags */}
-          <div ref={langRef} className="hidden md:block relative">
+          {/* Right side actions */}
+          <div className="flex items-center gap-3">
+            {/* Language Selector - Desktop */}
+            <div ref={langRef} className="hidden lg:block relative">
+              <button
+                aria-haspopup="listbox"
+                aria-expanded={langOpen}
+                aria-label={`Language: ${availableLocales.find((l) => l.code === locale)?.label || 'English'}`}
+                onClick={() => setLangOpen((s) => !s)}
+                className={`flex items-center gap-2 px-3 py-2 rounded-full text-sm font-medium transition-all duration-200 ${langOpen
+                    ? 'bg-gray-100 text-gray-900'
+                    : 'text-gray-600 hover:bg-gray-100/80 hover:text-gray-900'
+                  }`}
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-lg leading-none">{flags[locale]}</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {langOpen && (
+                <div className="absolute right-0 mt-2 w-44 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <ul role="listbox" aria-label="Select language" className="py-2">
+                    {availableLocales.map((l) => (
+                      <li key={l.code} role="option" aria-selected={locale === l.code}>
+                        <button
+                          onClick={() => { setLocale(l.code); setLangOpen(false); }}
+                          className={`w-full text-left px-4 py-2.5 flex items-center gap-3 transition-colors ${locale === l.code
+                              ? 'bg-[#ec547c]/5 text-[#ec547c]'
+                              : 'text-gray-700 hover:bg-gray-50'
+                            }`}
+                        >
+                          <span className="text-xl">{flags[l.code]}</span>
+                          <span className={`text-sm ${locale === l.code ? 'font-semibold' : 'font-medium'}`}>
+                            {l.label}
+                          </span>
+                          {locale === l.code && (
+                            <span className="ml-auto w-2 h-2 rounded-full bg-[#ec547c]" />
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* CTA Button - Desktop */}
+            <a
+              href="https://apps.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#ec547c] to-[#ed754f] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-[#ec547c]/25 hover:shadow-xl hover:shadow-[#ec547c]/30 hover:scale-105 transition-all duration-200"
+            >
+              {t('cta.download')}
+            </a>
+
+            {/* Mobile Menu Button */}
             <button
-              aria-haspopup="listbox"
-              aria-expanded={langOpen}
-              aria-label={`Language, ${availableLocales.find((l) => l.code === locale)?.label || 'English'}`}
-              onClick={() => setLangOpen((s) => !s)}
-              className="flex items-center gap-2 border rounded px-2 py-1 text-sm bg-white">
-              <span className="text-lg">
-                {locale === 'en' ? '🇬🇧' : locale === 'nl' ? '🇳🇱' : locale === 'de' ? '🇩🇪' : locale === 'fr' ? '🇫🇷' : locale === 'tr' ? '🇹🇷' : ''}
-              </span>
-              <span className="text-sm">
-                {availableLocales.find((l) => l.code === locale)?.label || 'EN'}
-              </span>
-              <svg className="w-4 h-4 text-gray-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clipRule="evenodd" />
-              </svg>
+              aria-label="Toggle menu"
+              aria-expanded={open}
+              onClick={() => setOpen((s) => !s)}
+              className="lg:hidden p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+            >
+              {open ? (
+                <X className="w-5 h-5 text-gray-700" />
+              ) : (
+                <Menu className="w-5 h-5 text-gray-700" />
+              )}
             </button>
-
-            {langOpen && (
-              <ul role="listbox" aria-label="Select language" className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg z-50">
-                {availableLocales.map((l) => (
-                  <li key={l.code} role="option" aria-selected={locale === l.code}>
-                    <button
-                      onClick={() => { setLocale(l.code as any); setLangOpen(false); }}
-                      className={`w-full text-left px-3 py-2 hover:bg-gray-50 flex items-center gap-2 ${locale === l.code ? 'font-semibold' : ''}`}>
-                      <span className="text-lg">
-                        {l.code === 'en' ? '🇬🇧' : l.code === 'nl' ? '🇳🇱' : l.code === 'de' ? '🇩🇪' : l.code === 'fr' ? '🇫🇷' : l.code === 'tr' ? '🇹🇷' : ''}
-                      </span>
-                      <span className="text-sm">{l.label}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
           </div>
-
-          <button
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            onClick={() => setOpen((s) => !s)}
-            className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ec547c]"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={open ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}></path></svg>
-          </button>
         </div>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden absolute right-6 top-full mt-2 w-[220px] bg-white border border-gray-100 rounded-lg shadow-lg z-50">
-          <div className="flex flex-col p-3">
-            <a href="/" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/')}`}>{t('nav.home')}</a>
-            <a href="/pricing" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/pricing')}`}>{t('nav.pricing')}</a>
-            <a href="/blog" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/blog')}`}>{t('nav.blog')}</a>
-            <a href="/about" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/about')}`}>{t('nav.about')}</a>
-            <a href="/careers" onClick={() => setOpen(false)} className={`py-2 ${linkClass('/careers')}`}>{t('nav.careers')}</a>
+        <div className="lg:hidden fixed inset-0 top-[72px] bg-white/95 backdrop-blur-xl z-40 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="max-w-lg mx-auto px-6 py-8">
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`px-4 py-3 rounded-2xl text-lg font-medium transition-all ${isActive
+                        ? 'bg-[#ec547c]/10 text-[#ec547c]'
+                        : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
+            </nav>
 
-            {/* Language selector in mobile menu */}
-            <div className="mt-2 pt-2 border-t">
-              <label className="text-sm text-gray-600 mb-1 block">Language</label>
-              <select aria-label="Language" value={locale} onChange={(e) => { setLocale(e.target.value as any); setOpen(false); }} className="w-full border rounded px-2 py-1 text-sm">
+            {/* Language Selector - Mobile */}
+            <div className="mt-8 pt-6 border-t border-gray-100">
+              <p className="text-sm text-gray-500 mb-3 px-4">{t('nav.language') || 'Language'}</p>
+              <div className="grid grid-cols-2 gap-2">
                 {availableLocales.map((l) => (
-                  <option key={l.code} value={l.code}>{l.label}</option>
+                  <button
+                    key={l.code}
+                    onClick={() => { setLocale(l.code); setOpen(false); }}
+                    className={`flex items-center gap-2 px-4 py-3 rounded-xl transition-all ${locale === l.code
+                        ? 'bg-[#ec547c]/10 text-[#ec547c]'
+                        : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                      }`}
+                  >
+                    <span className="text-xl">{flags[l.code]}</span>
+                    <span className={`text-sm ${locale === l.code ? 'font-semibold' : ''}`}>
+                      {l.label}
+                    </span>
+                  </button>
                 ))}
-              </select>
+              </div>
+            </div>
+
+            {/* CTA Button - Mobile */}
+            <div className="mt-8">
+              <a
+                href="https://apps.apple.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#ec547c] to-[#ed754f] text-white px-6 py-4 rounded-2xl text-lg font-semibold shadow-lg"
+              >
+                {t('cta.download')}
+              </a>
             </div>
           </div>
         </div>

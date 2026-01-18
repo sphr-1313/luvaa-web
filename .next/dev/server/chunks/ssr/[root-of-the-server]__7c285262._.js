@@ -27,10 +27,8 @@ module.exports = mod;
 "use strict";
 
 __turbopack_context__.s([
-    "I18nProvider",
-    ()=>I18nProvider,
     "default",
-    ()=>__TURBOPACK__default__export__,
+    ()=>I18nProvider,
     "useI18n",
     ()=>useI18n
 ]);
@@ -49,15 +47,102 @@ const translations = {
             about: "About",
             careers: "Careers"
         },
-        press: {
-            title: "Press & Media",
-            lead: "For press inquiries, high-resolution assets, or partnership opportunities, contact press@luvaa.app.",
-            kitTitle: "Press Kit",
-            kitDesc: "Our press kit includes logos, screenshots, and executive bios."
+        hero: {
+            badge: "Your Personal Style Companion",
+            title1: "Dress Better.",
+            titleHighlight: "Feel Amazing.",
+            subtitle: "The AI-powered fashion app that rates your outfits, suggests what to wear, and helps you discover your unique style. Join 10,000+ users who've transformed their wardrobes.",
+            downloadOn: "Download on the",
+            getItOn: "GET IT ON",
+            scroll: "Scroll to explore"
+        },
+        stats: {
+            users: "Users",
+            outfits: "Outfits",
+            rating: "App Rating"
+        },
+        features: {
+            badge: "Powerful Features",
+            title: "Everything You Need to Look Your Best",
+            subtitle: "Six game-changing features designed to transform how you dress, shop, and express yourself through fashion.",
+            learnMore: "Learn more",
+            rateFit: {
+                title: "Rate My Fit",
+                tagline: "Get honest feedback instantly",
+                description: "Snap a photo of your outfit and get instant, honest ratings. We don't just give you a score—we give you actionable tips on how to elevate your look."
+            },
+            styleGenie: {
+                title: "Style Genie",
+                tagline: "'I have nothing to wear' is cancelled",
+                description: "Tell the Style Genie where you're going—a date, the office, or a lazy Sunday—and it will build the perfect outfit from your digital closet instantly."
+            },
+            inspiration: {
+                title: "Infinite Inspiration",
+                tagline: "Never feel uninspired again",
+                description: "Scroll through thousands of stunning, real-world outfit ideas from our global community. Filter by style, season, or occasion to spark your next great look."
+            },
+            studio: {
+                title: "Try Before You Wear",
+                tagline: "Your virtual fitting room",
+                description: "Mix and match your clothes on a digital canvas. Layer jackets, swap shoes, and test accessories—create your dream outfit while your clothes stay folded."
+            },
+            marketplace: {
+                title: "Shop The Look",
+                tagline: "Find what you're missing",
+                description: "See an outfit you love but missing that key piece? Our marketplace connects you to unique items from style-savvy users who share your taste."
+            },
+            fashionDna: {
+                title: "Fashion DNA",
+                tagline: "Discover your unique style",
+                description: "Take our interactive quiz to decode your personal Fashion DNA. Understand your core aesthetic and build a wardrobe that's 100% authentically you."
+            }
+        },
+        howItWorks: {
+            badge: "Simple & Easy",
+            title: "Get Started in Minutes",
+            subtitle: "Four simple steps to transform your wardrobe experience",
+            step1Title: "Download the App",
+            step1Desc: "Available free on iOS and Android",
+            step2Title: "Snap Your Clothes",
+            step2Desc: "Build your digital wardrobe",
+            step3Title: "Get Styled",
+            step3Desc: "Receive personalized suggestions",
+            step4Title: "Look Amazing",
+            step4Desc: "Step out with confidence"
+        },
+        testimonials: {
+            badge: "Loved by Users",
+            title: "Real People, Real Results",
+            quote1: "Luvaa completely changed how I approach getting dressed. The outfit ratings are spot-on!",
+            quote2: "The Style Genie is like having a personal stylist in my pocket. I'm never stuck anymore.",
+            quote3: "I've discovered my personal style thanks to the Fashion DNA quiz. Game changer!",
+            quote4: "Finally found my aesthetic. The inspiration feed is incredible!",
+            quote5: "The Studio feature saved me from so many bad outfit decisions.",
+            quote6: "Sold items I never wore and found unique pieces from other users!"
+        },
+        trust: {
+            secure: "Secure & Private",
+            privacy: "Your Data Protected",
+            free: "Free to Download"
+        },
+        cta: {
+            title: "Ready to Transform Your Style?",
+            subtitle: "Join thousands of users who've already discovered their best looks. Download Luvaa today and start dressing with confidence.",
+            download: "Download Free",
+            pricing: "View Pricing"
+        },
+        premium: {
+            title: "Unlock More with Luvaa Credits",
+            aiOutfits: "Generate outfits with AI",
+            bgRemoval: "Professional background removal",
+            virtualTryOn: "Virtual try-on with AI",
+            analytics: "Advanced style insights",
+            templates: "Exclusive outfit templates",
+            cta: "See Pricing"
         },
         pricing: {
-            title: "Pricing",
-            lead: "No subscriptions. No expiring credits. Just pay as you go.",
+            title: "Simple, Transparent Pricing",
+            lead: "No subscriptions. No expiring credits. Just pay as you go and unlock premium features.",
             features: {
                 noRecurring: "No recurring fees",
                 noExpiry: "Credits never expire",
@@ -68,43 +153,43 @@ const translations = {
                     title: "Starter Pack",
                     price: "$2.99",
                     credits: "10 AI Credits",
-                    desc: "Best for trying it out.",
+                    desc: "Perfect for trying it out.",
                     value: ""
                 },
                 popular: {
                     title: "Popular Pack",
                     price: "$4.99",
                     credits: "25 AI Credits",
-                    desc: "Best for seasonal wardrobe refreshes.",
+                    desc: "Best for regular styling.",
                     value: "Save ~30%"
                 },
                 pro: {
                     title: "Pro Pack",
                     price: "$9.99",
                     credits: "60 AI Credits",
-                    desc: "Best for fashion creators & power users.",
+                    desc: "For fashion enthusiasts.",
                     value: "Best Value (Save ~45%)"
                 }
             }
         },
+        press: {
+            title: "Press & Media",
+            lead: "For press inquiries, high-resolution assets, or partnership opportunities, contact press@luvaa.app.",
+            kitTitle: "Press Kit",
+            kitDesc: "Our press kit includes logos, screenshots, and executive bios."
+        },
         featuresPage: {
             title: "Features",
-            lead: "Luvaa helps you discover, organize and trade fashion with smart suggestions and a community-driven marketplace."
+            lead: "Discover all the powerful tools Luvaa offers to transform your fashion experience."
         },
         legal: {
             privacyTitle: "Privacy Policy",
             termsTitle: "Terms of Service",
-            contactTitle: "Contact",
-            termsSummary: "These terms govern the use of Luvaa's website and services. By using Luvaa you agree to our terms.",
-            userContentTitle: "User Content",
-            userContent: "Users retain ownership of images they upload but grant Luvaa a license to display and process content to provide service functionality.",
-            privacySummary: "Your privacy matters to us. Luvaa collects account information and wardrobe data to provide personalization and marketplace features.",
-            dataUseTitle: "Data Use",
-            dataUse: "We use wardrobe photos to generate tags and suggestions. Aggregated, anonymized data helps improve recommendations."
+            contactTitle: "Contact"
         },
         contact: {
-            title: "Contact",
-            lead: "Have questions? Reach out to us at hello@luvaa.app or use the form below.",
+            title: "Contact Us",
+            lead: "Have questions? We'd love to hear from you. Reach out at hello@luvaa.app.",
             form: {
                 name: "Name",
                 email: "Email",
@@ -114,85 +199,13 @@ const translations = {
         },
         blogPage: {
             title: "Blog",
-            lead: "Stories, updates, and insights from the Luvaa team."
+            lead: "Stories, updates, and style tips from the Luvaa team."
         },
         blog: {
             featured: {
                 title: "Featured: How to Refresh Your Wardrobe",
                 body: "Learn practical steps to sort your closet, identify pieces to keep or sell, and create new outfits without buying more."
             }
-        },
-        cta: {
-            tryOnWeb: "Try on Web"
-        },
-        hero: {
-            title1: "Your Wardrobe,",
-            titleHighlight: "Reimagined",
-            subtitle: "Luvaa is the app that inspires your style, organizes your closet, and helps you buy & sell fashion. Join 10,000+ users and discover 300,000+ outfits.",
-            appPreview: "App Preview"
-        },
-        stats: {
-            users: "Users",
-            outfits: "Outfits",
-            items: "Items for Sale"
-        },
-        features: {
-            inspired: "Get Inspired",
-            organize: "Organize Closet",
-            suggestions: "Smart Suggestions",
-            sell: "Sell & Shop",
-            digitalCloset: "Digital Closet",
-            digitalClosetDesc: "Upload photos of your clothes, tag items, and create collections.",
-            aiSuggestions: "AI Outfit Suggestions",
-            aiSuggestionsDesc: "Personalized outfit recommendations based on your wardrobe and context.",
-            marketplace: "Selling & Marketplace",
-            marketplaceDesc: "List items for sale with pricing suggestions and connect with buyers.",
-            inspiration: "Inspiration Feed",
-            inspirationDesc: "Discover outfits from the community and save looks.",
-            search: "Smart Search & Tags",
-            searchDesc: "Find items quickly by color, season, or custom tags.",
-            detailedTitle: "Everything You Need to Master Your Style",
-            detailedSubtitle: "Powerful features designed to transform how you interact with your wardrobe",
-            smartRecommendations: "Personalized Outfit Suggestions",
-            smartRecommendationsDesc: "Get outfit suggestions tailored to your style. The app learns your preferences and suggests looks that match your taste, occasion, and season.",
-            organizeDigital: "Organize Your Closet Digitally",
-            organizeDigitalDesc: "Upload photos of your clothes and accessories. Items are automatically categorized with backgrounds removed, creating a searchable digital wardrobe you can access anywhere.",
-            mixMatch: "Mix & Match in Real-Time",
-            mixMatchDesc: "Drag and drop items to create outfits on a virtual canvas. Experiment with different combinations, backgrounds, and layouts before committing to a look.",
-            intelligentAnalysis: "Smart Outfit Analysis",
-            intelligentAnalysisDesc: "Get instant insights on colors, patterns, styles, and occasions. Discover which pieces work well together and get suggestions for complementary items.",
-            saveOrganize: "Save & Organize Inspiration",
-            saveOrganizeDesc: "Create custom collections for different occasions, seasons, or moods. Save outfits from our curated feed or your own creations for easy access later.",
-            shopSimilar: "Shop Similar Items",
-            shopSimilarDesc: "Love an outfit but don't own the pieces? Browse our integrated marketplace to find similar items or list your own clothes for others to discover.",
-            findInstantly: "Find Anything Instantly",
-            findInstantlyDesc: "Search by color, style, season, or occasion. Natural language search understands queries like 'casual summer dress' or 'formal winter coat'.",
-            bgRemoval: "Automatic Background Removal",
-            bgRemovalDesc: "Upload any clothing photo and get clean, catalog-quality images with backgrounds automatically removed—perfect for your digital wardrobe."
-        },
-        premium: {
-            title: "Unlock More with Luvaa Credits",
-            aiOutfits: "Generate outfits with AI (even with your own photos!)",
-            bgRemoval: "Professional background removal",
-            virtualTryOn: "Virtual try-on with AI",
-            analytics: "Advanced style insights",
-            templates: "Exclusive outfit templates",
-            cta: "See Pricing"
-        },
-        howItWorks: {
-            title: "Get Started in Minutes",
-            subtitle: "Four simple steps to transform your wardrobe experience",
-            step1Title: "Download the app",
-            step1Desc: "Available on iOS and Android",
-            step2Title: "Upload your first items",
-            step2Desc: "Snap photos of your clothes",
-            step3Title: "Explore curated outfits",
-            step3Desc: "Get personalized recommendations",
-            step4Title: "Create your first look",
-            step4Desc: "Mix and match in Studio"
-        },
-        testimonials: {
-            title: "What Our Users Say"
         },
         footer: {
             company: {
@@ -214,24 +227,24 @@ const translations = {
         },
         about: {
             title: "About Luvaa",
-            lead: "Luvaa began as a passion project to reimagine how people interact with their wardrobes.",
-            lead2: "Our product combines intuitive design with machine learning to deliver outfit suggestions tailored to personal taste, weather, and occasion.",
+            lead: "Luvaa was born from a simple frustration: standing in front of a closet full of clothes and feeling like you have nothing to wear.",
+            lead2: "We're building the future of personal fashion—using AI to help everyone dress better, feel more confident, and express their unique style.",
             missionTitle: "Our Mission",
-            mission: "We aim to make fashion more sustainable by helping people rediscover and reuse what they already own.",
+            mission: "To democratize personal styling and make looking your best effortless for everyone.",
             teamTitle: "Our Team",
-            team: "A small team of designers, engineers, and fashion enthusiasts working remotely across the globe."
+            team: "A passionate team of designers, engineers, and fashion lovers working remotely across the globe."
         },
         careers: {
-            intro: "We're building the future of personal fashion. If you love design, mobile apps, and smarter shopping experiences, we'd love to hear from you.",
+            intro: "We're building the future of personal fashion. If you love design, mobile apps, and transforming how people express themselves, we'd love to hear from you.",
             whyTitle: "Why Work With Us",
-            whyCopy: "Luvaa offers flexible remote work, a collaborative culture, and opportunities to influence products used by thousands of users worldwide.",
+            whyCopy: "Flexible remote work, creative freedom, and the chance to impact millions of users worldwide.",
             openRoles: "Open Roles",
             viewApply: "View & Apply",
             frontendSummary: "Own web UI and performance. Build scalable, accessible components.",
             mobileSummary: "Ship native-feeling mobile experiences and camera/upload flows.",
-            mlSummary: "Work on recommendations and retrieval systems to personalize outfit suggestions.",
-            designerSummary: "Design mobile-first flows, prototyping, and user research.",
-            contactCopy: "Alternatively, you can email careers@luvaa.app with your resume and a short note about what excites you about fashion tech."
+            mlSummary: "Work on recommendations and AI systems to personalize outfit suggestions.",
+            designerSummary: "Design mobile-first flows, prototypes, and user research.",
+            contactCopy: "Email careers@luvaa.app with your resume and tell us what excites you about fashion tech."
         }
     },
     nl: {
@@ -243,14 +256,101 @@ const translations = {
             about: "Over",
             careers: "Vacatures"
         },
-        press: {
-            title: "Pers",
-            lead: "Voor persvragen, hoge resolutie assets of partnerschappen, neem contact op met press@luvaa.app.",
-            kitTitle: "Perskit",
-            kitDesc: "Onze perskit bevat logo's, screenshots en bio's van leidinggevenden."
+        hero: {
+            badge: "Je Persoonlijke Stijl Buddy",
+            title1: "Kleed Je Beter.",
+            titleHighlight: "Voel Je Geweldig.",
+            subtitle: "De AI-gestuurde mode-app die je outfits beoordeelt, suggereert wat je moet dragen, en helpt je jouw unieke stijl te ontdekken. Sluit je aan bij 10.000+ gebruikers.",
+            downloadOn: "Download in de",
+            getItOn: "DOWNLOAD IN",
+            scroll: "Scroll om te ontdekken"
+        },
+        stats: {
+            users: "Gebruikers",
+            outfits: "Outfits",
+            rating: "App Beoordeling"
+        },
+        features: {
+            badge: "Krachtige Functies",
+            title: "Alles Wat Je Nodig Hebt",
+            subtitle: "Zes baanbrekende functies ontworpen om te veranderen hoe je je kleedt, shopt en jezelf uitdrukt.",
+            learnMore: "Meer info",
+            rateFit: {
+                title: "Beoordeel Mijn Look",
+                tagline: "Krijg direct eerlijke feedback",
+                description: "Maak een foto van je outfit en krijg direct een eerlijke beoordeling. We geven niet alleen een score—we geven je tips om je look te verbeteren."
+            },
+            styleGenie: {
+                title: "Stijl Genie",
+                tagline: "'Ik heb niets om aan te trekken' is verleden tijd",
+                description: "Vertel de Stijl Genie waar je naartoe gaat en het bouwt direct de perfecte outfit uit je digitale kast."
+            },
+            inspiration: {
+                title: "Oneindige Inspiratie",
+                tagline: "Nooit meer zonder inspiratie",
+                description: "Scroll door duizenden prachtige outfit-ideeën van onze wereldwijde community. Filter op stijl, seizoen of gelegenheid."
+            },
+            studio: {
+                title: "Probeer Voor Je Draagt",
+                tagline: "Je virtuele paskamer",
+                description: "Mix en match je kleding op een digitaal canvas. Combineer jasjes, wissel schoenen en test accessoires."
+            },
+            marketplace: {
+                title: "Shop De Look",
+                tagline: "Vind wat je mist",
+                description: "Zie je een outfit die je leuk vindt maar mis je dat ene stuk? Onze marktplaats verbindt je met unieke items."
+            },
+            fashionDna: {
+                title: "Mode DNA",
+                tagline: "Ontdek je unieke stijl",
+                description: "Doe onze interactieve quiz om je persoonlijke Mode DNA te ontdekken. Begrijp je kern-esthetiek."
+            }
+        },
+        howItWorks: {
+            badge: "Simpel & Makkelijk",
+            title: "Start in Minuten",
+            subtitle: "Vier simpele stappen om je garderobe te transformeren",
+            step1Title: "Download de App",
+            step1Desc: "Gratis beschikbaar voor iOS en Android",
+            step2Title: "Fotografeer Je Kleding",
+            step2Desc: "Bouw je digitale garderobe",
+            step3Title: "Krijg Styling",
+            step3Desc: "Ontvang gepersonaliseerde suggesties",
+            step4Title: "Zie Er Geweldig Uit",
+            step4Desc: "Ga met vertrouwen de deur uit"
+        },
+        testimonials: {
+            badge: "Geliefd door Gebruikers",
+            title: "Echte Mensen, Echte Resultaten",
+            quote1: "Luvaa heeft volledig veranderd hoe ik me kleed. De outfit beoordelingen zijn perfect!",
+            quote2: "De Stijl Genie is als een persoonlijke stylist in mijn zak.",
+            quote3: "Ik heb mijn persoonlijke stijl ontdekt dankzij de Mode DNA quiz!",
+            quote4: "Eindelijk mijn esthetiek gevonden. De inspiratiefeed is geweldig!",
+            quote5: "De Studio functie heeft me gered van zoveel slechte outfit keuzes.",
+            quote6: "Items verkocht die ik nooit droeg en unieke stukken gevonden!"
+        },
+        trust: {
+            secure: "Veilig & Privé",
+            privacy: "Je Data Beschermd",
+            free: "Gratis te Downloaden"
+        },
+        cta: {
+            title: "Klaar om Je Stijl te Transformeren?",
+            subtitle: "Sluit je aan bij duizenden gebruikers die hun beste looks al hebben ontdekt.",
+            download: "Download Gratis",
+            pricing: "Bekijk Prijzen"
+        },
+        premium: {
+            title: "Ontgrendel Meer met Luvaa Credits",
+            aiOutfits: "Genereer outfits met AI",
+            bgRemoval: "Professionele achtergrondverwijdering",
+            virtualTryOn: "Virtuele paskamer met AI",
+            analytics: "Geavanceerde stijl inzichten",
+            templates: "Exclusieve outfit templates",
+            cta: "Bekijk Prijzen"
         },
         pricing: {
-            title: "Prijzen",
+            title: "Eenvoudige, Transparante Prijzen",
             lead: "Geen abonnementen. Geen verlopende credits. Betaal per gebruik.",
             features: {
                 noRecurring: "Geen terugkerende kosten",
@@ -262,135 +362,34 @@ const translations = {
                     title: "Starter Pack",
                     price: "$2.99",
                     credits: "10 AI Credits",
-                    desc: "Ideaal om het uit te proberen.",
+                    desc: "Perfect om uit te proberen.",
                     value: ""
                 },
                 popular: {
                     title: "Popular Pack",
                     price: "$4.99",
                     credits: "25 AI Credits",
-                    desc: "Beste voor seizoensgebonden vernieuwingen.",
+                    desc: "Beste voor regelmatig stylen.",
                     value: "Bespaar ~30%"
                 },
                 pro: {
                     title: "Pro Pack",
                     price: "$9.99",
                     credits: "60 AI Credits",
-                    desc: "Voor fashion creators & power users.",
+                    desc: "Voor mode-enthousiastelingen.",
                     value: "Beste Waarde (Bespaar ~45%)"
                 }
             }
         },
-        featuresPage: {
-            title: "Functies",
-            lead: "Luvaa helpt je mode te ontdekken, organiseren en verhandelen met slimme suggesties en een community-marktplaats."
-        },
-        legal: {
-            privacyTitle: "Privacybeleid",
-            termsTitle: "Gebruiksvoorwaarden",
-            contactTitle: "Contact",
-            termsSummary: "Deze voorwaarden regelen het gebruik van de website en diensten van Luvaa.",
-            userContentTitle: "Gebruikersinhoud",
-            userContent: "Gebruikers behouden eigendom van geüploade afbeeldingen maar verlenen Luvaa een licentie om content te tonen en te verwerken.",
-            privacySummary: "Uw privacy is belangrijk voor ons. Luvaa verzamelt accountgegevens en kastgegevens om personalisatie en marktplaatsfuncties te bieden.",
-            dataUseTitle: "Gegevensgebruik",
-            dataUse: "We gebruiken kastfoto's om tags en suggesties te genereren. Geaggregeerde, geanonimiseerde gegevens helpen bij het verbeteren van aanbevelingen."
-        },
-        contact: {
-            title: "Contact",
-            lead: "Vragen? Neem contact op via hello@luvaa.app of gebruik het onderstaande formulier.",
-            form: {
-                name: "Naam",
-                email: "E-mail",
-                message: "Bericht",
-                send: "Bericht verzenden"
-            }
-        },
-        blogPage: {
-            title: "Blog",
-            lead: "Verhalen, updates en inzichten van het Luvaa-team."
-        },
-        blog: {
-            featured: {
-                title: "Uitgelicht: Hoe Vernieuw Je Je Kledingkast",
-                body: "Leer praktische stappen om je kast te ordenen, stukken te identificeren om te behouden of te verkopen, en nieuwe outfits te maken zonder meer te kopen."
-            }
-        },
-        cta: {
-            tryOnWeb: "Probeer op Web"
-        },
-        hero: {
-            title1: "Je kledingkast,",
-            titleHighlight: "Hernieuwd",
-            subtitle: "Luvaa is de app die je stijl inspireert, je kast organiseert en helpt met kopen & verkopen van mode. Sluit je aan bij 10.000+ gebruikers en ontdek 300.000+ outfits.",
-            appPreview: "App Voorbeeld"
-        },
-        stats: {
-            users: "Gebruikers",
-            outfits: "Outfits",
-            items: "Items te koop"
-        },
-        features: {
-            inspired: "Laat je inspireren",
-            organize: "Organiseer kast",
-            suggestions: "Slimme suggesties",
-            sell: "Verkopen & Winkelen",
-            digitalCloset: "Digitale Kast",
-            digitalClosetDesc: "Upload foto's van je kleding, tag items en maak collecties.",
-            aiSuggestions: "AI Outfit Suggesties",
-            aiSuggestionsDesc: "Gepersonaliseerde outfit-voorstellen op basis van je kast en context.",
-            marketplace: "Verkopen & Markt",
-            marketplaceDesc: "Plaats items te koop met prijsvoorstellen en verbind met kopers.",
-            inspiration: "Inspiratiefeed",
-            inspirationDesc: "Ontdek outfits van de community en sla looks op.",
-            search: "Slim Zoeken & Tags",
-            searchDesc: "Vind items snel op kleur, seizoen of tags.",
-            detailedTitle: "Alles wat je nodig hebt om je stijl te beheersen",
-            detailedSubtitle: "Krachtige functies ontworpen om je interactie met je garderobe te transformeren",
-            smartRecommendations: "Gepersonaliseerde Outfit Suggesties",
-            smartRecommendationsDesc: "Krijg outfit suggesties op maat van je stijl. De app leert je voorkeuren en stelt looks voor die passen bij je smaak, gelegenheid en seizoen.",
-            organizeDigital: "Organiseer je Kast Digitaal",
-            organizeDigitalDesc: "Upload foto's van je kleding en accessoires. Items worden automatisch gecategoriseerd met verwijderde achtergronden, waardoor een doorzoekbare digitale garderobe ontstaat.",
-            mixMatch: "Mix & Match in Real-Time",
-            mixMatchDesc: "Sleep items om outfits te creëren op een virtueel canvas. Experimenteer met verschillende combinaties, achtergronden en layouts voordat je een look vastlegt.",
-            intelligentAnalysis: "Slimme Outfit Analyse",
-            intelligentAnalysisDesc: "Krijg directe inzichten over kleuren, patronen, stijlen en gelegenheden. Ontdek welke stukken goed samenwerken en krijg suggesties voor complementaire items.",
-            saveOrganize: "Bewaar & Organiseer Inspiratie",
-            saveOrganizeDesc: "Creëer aangepaste collecties voor verschillende gelegenheden, seizoenen of stemmingen. Bewaar outfits van onze feed of je eigen creaties voor gemakkelijke toegang later.",
-            shopSimilar: "Shop Vergelijkbare Items",
-            shopSimilarDesc: "Hou je van een outfit maar heb je de stukken niet? Blader door onze geïntegreerde marktplaats om vergelijkbare items te vinden of plaats je eigen kleding voor anderen om te ontdekken.",
-            findInstantly: "Vind Alles Direct",
-            findInstantlyDesc: "Zoek op kleur, stijl, seizoen of gelegenheid. Onze semantische zoekopdracht begrijpt natuurlijke taalvragen zoals 'casual zomerjurk' of 'formele winterjas'.",
-            bgRemoval: "Professionele Achtergrondverwijdering",
-            bgRemovalDesc: "Upload elke kledingfoto en onze AI verwijdert direct de achtergrond, waardoor schone, cataloguskwaliteit afbeeldingen ontstaan perfect voor je digitale garderobe."
-        },
-        premium: {
-            title: "Ontgrendel Meer met Luvaa Credits",
-            aiOutfits: "Genereer outfits met AI (zelfs met je eigen foto's!)",
-            bgRemoval: "Professionele achtergrondverwijdering",
-            virtualTryOn: "Virtuele paskamer met AI",
-            analytics: "Geavanceerde stijl inzichten",
-            templates: "Exclusieve outfit templates",
-            cta: "Bekijk Prijzen"
-        },
-        howItWorks: {
-            title: "Ga in Minuten van Start",
-            subtitle: "Vier eenvoudige stappen om je garderobe-ervaring te transformeren",
-            step1Title: "Download de app",
-            step1Desc: "Beschikbaar op iOS en Android",
-            step2Title: "Upload je eerste items",
-            step2Desc: "Maak foto's van je kleding",
-            step3Title: "Ontdek samengestelde outfits",
-            step3Desc: "Krijg gepersonaliseerde aanbevelingen",
-            step4Title: "Creëer je eerste look",
-            step4Desc: "Mix en match in Studio"
-        },
-        testimonials: {
-            title: "Wat onze gebruikers zeggen"
+        press: {
+            title: "Pers & Media",
+            lead: "Voor persvragen, neem contact op met press@luvaa.app.",
+            kitTitle: "Perskit",
+            kitDesc: "Onze perskit bevat logo's, screenshots en bio's."
         },
         footer: {
             company: {
-                about: "Over ons",
+                about: "Over Ons",
                 careers: "Vacatures",
                 press: "Pers"
             },
@@ -408,24 +407,53 @@ const translations = {
         },
         about: {
             title: "Over Luvaa",
-            lead: "Luvaa begon als een passieproject om te heroverwegen hoe mensen omgaan met hun kledingkasten.",
-            lead2: "Ons product combineert intuïtief ontwerp met machine learning om outfit-voorstellen op maat te leveren.",
+            lead: "Luvaa ontstond uit een simpele frustratie: voor een volle kast staan en het gevoel hebben dat je niets hebt om aan te trekken.",
+            lead2: "We bouwen de toekomst van persoonlijke mode—met AI om iedereen te helpen beter te kleden.",
             missionTitle: "Onze Missie",
-            mission: "We willen mode duurzamer maken door mensen te helpen herontdekken wat ze al bezitten.",
+            mission: "Persoonlijke styling democratiseren en er op je best uitzien moeiteloos maken voor iedereen.",
             teamTitle: "Ons Team",
-            team: "Een klein team van ontwerpers, ingenieurs en mode-enthousiastelingen die wereldwijd op afstand werken."
+            team: "Een gepassioneerd team van ontwerpers, ingenieurs en modeliefhebbers dat wereldwijd op afstand werkt."
         },
         careers: {
-            intro: "Wir bauen die Zukunft der persönlichen Mode. Wenn Sie Design, mobile Apps und intelligentes Einkaufen lieben, freuen wir uns auf Ihre Bewerbung.",
-            whyTitle: "Warum bei uns arbeiten",
-            whyCopy: "Luvaa bietet flexibles Remote-Arbeiten, eine kollaborative Kultur und Chancen, Produktentscheidungen zu beeinflussen.",
-            openRoles: "Offene Stellen",
-            viewApply: "Ansehen & Bewerben",
-            frontendSummary: "Verantwortlich für Web-UI und Performance. Erstellen Sie skalierbare, zugängliche Komponenten.",
-            mobileSummary: "Liefern Sie native mobile Erlebnisse und Kamera-/Upload-Flows.",
-            mlSummary: "Arbeiten Sie an Empfehlungssystemen und Retrieval, um Outfit-Vorschläge zu personalisieren.",
-            designerSummary: "Gestalten Sie Mobile-first-Flows, Prototyping und Nutzerforschung.",
-            contactCopy: "Alternativ können Sie Ihre Bewerbung an careers@luvaa.app senden."
+            intro: "We bouwen de toekomst van persoonlijke mode. Als je van design en mobiele apps houdt, horen we graag van je.",
+            whyTitle: "Waarom Bij Ons Werken",
+            whyCopy: "Flexibel werken op afstand, creatieve vrijheid en impact op miljoenen gebruikers wereldwijd.",
+            openRoles: "Open Vacatures",
+            viewApply: "Bekijk & Solliciteer",
+            frontendSummary: "Verantwoordelijk voor web UI en performance.",
+            mobileSummary: "Bouw native mobiele ervaringen.",
+            mlSummary: "Werk aan AI-systemen voor gepersonaliseerde outfit suggesties.",
+            designerSummary: "Ontwerp mobile-first flows en prototypes.",
+            contactCopy: "Mail careers@luvaa.app met je CV."
+        },
+        contact: {
+            title: "Contact",
+            lead: "Vragen? Neem contact op via hello@luvaa.app.",
+            form: {
+                name: "Naam",
+                email: "E-mail",
+                message: "Bericht",
+                send: "Verstuur"
+            }
+        },
+        blogPage: {
+            title: "Blog",
+            lead: "Verhalen en stijltips van het Luvaa team."
+        },
+        blog: {
+            featured: {
+                title: "Uitgelicht: Vernieuw Je Garderobe",
+                body: "Leer praktische stappen om je kast te ordenen en nieuwe outfits te maken."
+            }
+        },
+        legal: {
+            privacyTitle: "Privacybeleid",
+            termsTitle: "Gebruiksvoorwaarden",
+            contactTitle: "Contact"
+        },
+        featuresPage: {
+            title: "Functies",
+            lead: "Ontdek alle krachtige tools die Luvaa biedt."
         }
     },
     de: {
@@ -434,18 +462,105 @@ const translations = {
             features: "Funktionen",
             pricing: "Preise",
             blog: "Blog",
-            about: "Über",
+            about: "Über Uns",
             careers: "Karriere"
         },
-        press: {
-            title: "Presse & Medien",
-            lead: "Für Presseanfragen, hochauflösende Assets oder Partnerschaften kontaktieren Sie press@luvaa.app.",
-            kitTitle: "Pressekit",
-            kitDesc: "Unser Pressekit enthält Logos, Screenshots und Biografien der Geschäftsführung."
+        hero: {
+            badge: "Dein Persönlicher Stilberater",
+            title1: "Besser Anziehen.",
+            titleHighlight: "Großartig Fühlen.",
+            subtitle: "Die KI-gestützte Mode-App, die deine Outfits bewertet, dir sagt was du anziehen sollst und dir hilft, deinen einzigartigen Stil zu entdecken.",
+            downloadOn: "Laden im",
+            getItOn: "JETZT BEI",
+            scroll: "Scrollen zum Entdecken"
+        },
+        stats: {
+            users: "Nutzer",
+            outfits: "Outfits",
+            rating: "App-Bewertung"
+        },
+        features: {
+            badge: "Leistungsstarke Funktionen",
+            title: "Alles Was Du Brauchst",
+            subtitle: "Sechs bahnbrechende Funktionen, die verändern wie du dich kleidest und ausdrückst.",
+            learnMore: "Mehr erfahren",
+            rateFit: {
+                title: "Outfit Bewerten",
+                tagline: "Sofortiges ehrliches Feedback",
+                description: "Mach ein Foto deines Outfits und erhalte sofort eine ehrliche Bewertung. Wir geben dir Tipps, wie du deinen Look verbessern kannst."
+            },
+            styleGenie: {
+                title: "Stil Genie",
+                tagline: "'Ich hab nichts anzuziehen' ist Geschichte",
+                description: "Sag dem Stil Genie wohin du gehst und es erstellt sofort das perfekte Outfit aus deinem digitalen Kleiderschrank."
+            },
+            inspiration: {
+                title: "Endlose Inspiration",
+                tagline: "Nie wieder uninspiriert",
+                description: "Scrolle durch tausende wunderschöne Outfit-Ideen aus unserer globalen Community. Filtere nach Stil, Saison oder Anlass."
+            },
+            studio: {
+                title: "Anprobieren Vor Dem Tragen",
+                tagline: "Deine virtuelle Umkleidekabine",
+                description: "Mixe und kombiniere deine Kleidung auf einem digitalen Canvas. Kombiniere Jacken, tausche Schuhe und teste Accessoires."
+            },
+            marketplace: {
+                title: "Shop Den Look",
+                tagline: "Finde was dir fehlt",
+                description: "Siehst du ein Outfit das dir gefällt, aber dir fehlt ein Teil? Unser Marktplatz verbindet dich mit einzigartigen Stücken."
+            },
+            fashionDna: {
+                title: "Mode DNA",
+                tagline: "Entdecke deinen einzigartigen Stil",
+                description: "Mach unser interaktives Quiz um deine persönliche Mode DNA zu entschlüsseln. Verstehe deine Kern-Ästhetik."
+            }
+        },
+        howItWorks: {
+            badge: "Einfach & Schnell",
+            title: "Starte in Minuten",
+            subtitle: "Vier einfache Schritte um deine Garderobe zu transformieren",
+            step1Title: "App Herunterladen",
+            step1Desc: "Kostenlos für iOS und Android",
+            step2Title: "Kleidung Fotografieren",
+            step2Desc: "Baue deine digitale Garderobe",
+            step3Title: "Styling Erhalten",
+            step3Desc: "Personalisierte Vorschläge bekommen",
+            step4Title: "Großartig Aussehen",
+            step4Desc: "Mit Selbstvertrauen rausgehen"
+        },
+        testimonials: {
+            badge: "Von Nutzern Geliebt",
+            title: "Echte Menschen, Echte Ergebnisse",
+            quote1: "Luvaa hat komplett verändert wie ich mich anziehe. Die Outfit-Bewertungen sind perfekt!",
+            quote2: "Der Stil Genie ist wie ein persönlicher Stylist in meiner Tasche.",
+            quote3: "Ich habe meinen persönlichen Stil dank dem Mode DNA Quiz entdeckt!",
+            quote4: "Endlich meine Ästhetik gefunden. Der Inspirations-Feed ist unglaublich!",
+            quote5: "Die Studio Funktion hat mich vor so vielen schlechten Outfit-Entscheidungen bewahrt.",
+            quote6: "Sachen verkauft die ich nie getragen habe und einzigartige Stücke gefunden!"
+        },
+        trust: {
+            secure: "Sicher & Privat",
+            privacy: "Daten Geschützt",
+            free: "Kostenlos Herunterladen"
+        },
+        cta: {
+            title: "Bereit Deinen Stil zu Transformieren?",
+            subtitle: "Schließe dich tausenden Nutzern an, die ihre besten Looks bereits entdeckt haben.",
+            download: "Kostenlos Herunterladen",
+            pricing: "Preise Ansehen"
+        },
+        premium: {
+            title: "Mehr Freischalten mit Luvaa Credits",
+            aiOutfits: "Outfits mit KI generieren",
+            bgRemoval: "Professionelle Hintergrundentfernung",
+            virtualTryOn: "Virtuelles Anprobieren mit KI",
+            analytics: "Erweiterte Stil-Einblicke",
+            templates: "Exklusive Outfit-Vorlagen",
+            cta: "Preise Ansehen"
         },
         pricing: {
-            title: "Preise",
-            lead: "Keine Abos. Keine verfallenden Credits. Zahlen Sie nur, was Sie nutzen.",
+            title: "Einfache, Transparente Preise",
+            lead: "Keine Abos. Keine verfallenden Credits. Zahle nur was du nutzt.",
             features: {
                 noRecurring: "Keine wiederkehrenden Gebühren",
                 noExpiry: "Credits verfallen nie",
@@ -463,128 +578,27 @@ const translations = {
                     title: "Popular Pack",
                     price: "$4.99",
                     credits: "25 AI Credits",
-                    desc: "Beste für saisonale Updates.",
-                    value: "Sparen Sie ~30%"
+                    desc: "Beste für regelmäßiges Styling.",
+                    value: "Spare ~30%"
                 },
                 pro: {
                     title: "Pro Pack",
                     price: "$9.99",
                     credits: "60 AI Credits",
-                    desc: "Für Mode-Creator & Power-User.",
-                    value: "Bester Wert (Sparen Sie ~45%)"
+                    desc: "Für Mode-Enthusiasten.",
+                    value: "Bester Wert (Spare ~45%)"
                 }
             }
         },
-        featuresPage: {
-            title: "Funktionen",
-            lead: "Luvaa hilft Ihnen, Mode zu entdecken, zu organisieren und zu handeln, mit intelligenten Vorschlägen und einem Community-Marktplatz."
-        },
-        legal: {
-            privacyTitle: "Datenschutz",
-            termsTitle: "Nutzungsbedingungen",
-            contactTitle: "Kontakt",
-            termsSummary: "Diese Bedingungen regeln die Nutzung der Luvaa-Website und -Dienste.",
-            userContentTitle: "Nutzerinhalte",
-            userContent: "Nutzer behalten das Eigentum an hochgeladenen Bildern, gewähren Luvaa jedoch eine Lizenz zur Anzeige und Verarbeitung.",
-            privacySummary: "Ihre Privatsphäre ist uns wichtig. Luvaa sammelt Kontoinformationen und Garderobendaten, um Personalisierung und Marktplatzfunktionen bereitzustellen.",
-            dataUseTitle: "Datenverwendung",
-            dataUse: "Wir verwenden Garderobenfotos, um Tags und Vorschläge zu generieren. Aggregierte, anonymisierte Daten verbessern Empfehlungen."
-        },
-        contact: {
-            title: "Kontakt",
-            lead: "Fragen? Kontaktieren Sie uns unter hello@luvaa.app oder verwenden Sie das untenstehende Formular.",
-            form: {
-                name: "Name",
-                email: "E-Mail",
-                message: "Nachricht",
-                send: "Nachricht senden"
-            }
-        },
-        blogPage: {
-            title: "Blog",
-            lead: "Geschichten, Updates und Einblicke vom Luvaa-Team."
-        },
-        blog: {
-            featured: {
-                title: "Empfohlen: Wie Sie Ihre Garderobe Auffrischen",
-                body: "Erfahren Sie praktische Schritte zum Sortieren Ihres Schranks, zur Identifizierung von Teilen zum Behalten oder Verkaufen und zum Erstellen neuer Outfits."
-            }
-        },
-        cta: {
-            tryOnWeb: "Im Web ausprobieren"
-        },
-        hero: {
-            title1: "Dein Kleiderschrank,",
-            titleHighlight: "Neu gedacht",
-            subtitle: "Luvaa ist die App, die deinen Stil inspiriert, deinen Kleiderschrank organisiert und beim Kaufen & Verkaufen von Mode hilft. Schließe dich 10.000+ Nutzern an und entdecke 300.000+ Outfits.",
-            appPreview: "App Vorschau"
-        },
-        stats: {
-            users: "Benutzer",
-            outfits: "Outfits",
-            items: "Artikel zum Verkauf"
-        },
-        features: {
-            inspired: "Lass dich inspirieren",
-            organize: "Kleiderschrank organisieren",
-            suggestions: "Intelligente Vorschläge",
-            sell: "Verkaufen & Einkaufen",
-            digitalCloset: "Digitale Garderobe",
-            digitalClosetDesc: "Lade Fotos deiner Kleidung hoch, tagge Items und erstelle Kollektionen.",
-            aiSuggestions: "KI Outfit-Vorschläge",
-            aiSuggestionsDesc: "Personalisierte Outfit-Empfehlungen basierend auf deinem Kleiderschrank und Kontext.",
-            marketplace: "Verkauf & Marktplatz",
-            marketplaceDesc: "Stelle Artikel zum Verkauf mit Preisvorschlägen ein und verbinde dich mit Käufern.",
-            inspiration: "Inspiration Feed",
-            inspirationDesc: "Entdecke Outfits aus der Community und speichere Looks.",
-            search: "Intelligente Suche & Tags",
-            searchDesc: "Finde Artikel schnell nach Farbe, Saison oder benutzerdefinierten Tags.",
-            detailedTitle: "Alles, was du brauchst, um deinen Stil zu meistern",
-            detailedSubtitle: "Leistungsstarke Funktionen, die deine Interaktion mit deiner Garderobe transformieren",
-            smartRecommendations: "Personalisierte Outfit-Empfehlungen",
-            smartRecommendationsDesc: "Erhalte auf deinen Stil zugeschnittene Outfit-Vorschläge. Die App lernt deine Präferenzen und schlägt Looks vor, die zu deinem Geschmack, Anlass und der Saison passen.",
-            organizeDigital: "Organisiere deinen Kleiderschrank digital",
-            organizeDigitalDesc: "Lade Fotos deiner Kleidung und Accessoires hoch. Artikel werden automatisch kategorisiert und Hintergründe entfernt, wodurch eine durchsuchbare digitale Garderobe entsteht.",
-            mixMatch: "Mix & Match in Echtzeit",
-            mixMatchDesc: "Ziehe Artikel per Drag & Drop, um Outfits auf einer virtuellen Leinwand zu erstellen. Experimentiere mit verschiedenen Kombinationen, Hintergründen und Layouts.",
-            intelligentAnalysis: "Intelligente Outfit-Analyse",
-            intelligentAnalysisDesc: "Erhalte sofortige Einblicke in Farben, Muster, Stile und Anlässe. Entdecke, welche Teile gut zusammenpassen und erhalte Vorschläge für ergänzende Artikel.",
-            saveOrganize: "Speichere & Organisiere Inspiration",
-            saveOrganizeDesc: "Erstelle benutzerdefinierte Kollektionen für verschiedene Anlässe, Jahreszeiten oder Stimmungen. Speichere Outfits aus unserem kuratierten Feed oder deine eigenen Kreationen für späteren Zugriff.",
-            shopSimilar: "Kaufe ähnliche Artikel",
-            shopSimilarDesc: "Liebst du ein Outfit, besitzt aber die Teile nicht? Durchsuche unseren integrierten Marktplatz, um ähnliche Artikel zu finden oder liste deine eigene Kleidung für andere zum Entdecken.",
-            findInstantly: "Finde alles sofort",
-            findInstantlyDesc: "Suche nach Farbe, Stil, Saison oder Anlass. Unsere semantische Suche versteht natürliche Sprachanfragen wie 'lässiges Sommerkleid' oder 'formeller Wintermantel'.",
-            bgRemoval: "Professionelle Hintergrundentfernung",
-            bgRemovalDesc: "Lade jedes Kleidungsfoto hoch und unsere KI entfernt sofort den Hintergrund und erstellt saubere, katalogqualität Bilder, die perfekt für deine digitale Garderobe sind."
-        },
-        premium: {
-            title: "Schalte mehr frei mit Luvaa Credits",
-            aiOutfits: "Generiere Outfits mit KI (sogar mit deinen eigenen Fotos!)",
-            bgRemoval: "Professionelle Hintergrundentfernung",
-            virtualTryOn: "Virtuelle Anprobe mit KI",
-            analytics: "Erweiterte Stil-Einblicke",
-            templates: "Exklusive Outfit-Vorlagen",
-            cta: "Preise ansehen"
-        },
-        howItWorks: {
-            title: "Starte in Minuten",
-            subtitle: "Vier einfache Schritte, um dein Garderobe-Erlebnis zu transformieren",
-            step1Title: "Lade die App herunter",
-            step1Desc: "Verfügbar für iOS und Android",
-            step2Title: "Lade deine ersten Artikel hoch",
-            step2Desc: "Fotografiere deine Kleidung",
-            step3Title: "Entdecke kuratierte Outfits",
-            step3Desc: "Erhalte personalisierte Empfehlungen",
-            step4Title: "Erstelle deinen ersten Look",
-            step4Desc: "Mix und Match im Studio"
-        },
-        testimonials: {
-            title: "Was unsere Nutzer sagen"
+        press: {
+            title: "Presse & Medien",
+            lead: "Für Presseanfragen kontaktiere press@luvaa.app.",
+            kitTitle: "Pressekit",
+            kitDesc: "Unser Pressekit enthält Logos und Screenshots."
         },
         footer: {
             company: {
-                about: "Über uns",
+                about: "Über Uns",
                 careers: "Karriere",
                 press: "Presse"
             },
@@ -602,24 +616,53 @@ const translations = {
         },
         about: {
             title: "Über Luvaa",
-            lead: "Luvaa begann als ein Projekt aus Leidenschaft, um neu zu denken, wie Menschen mit ihren Kleiderschränken interagieren.",
-            lead2: "Unser Produkt kombiniert intuitives Design mit Machine Learning, um Outfit-Vorschläge zu liefern, die auf persönlichen Geschmack und Anlass zugeschnitten sind.",
+            lead: "Luvaa entstand aus einer einfachen Frustration: Vor einem vollen Kleiderschrank zu stehen und das Gefühl zu haben, nichts anzuziehen zu haben.",
+            lead2: "Wir bauen die Zukunft der persönlichen Mode—mit KI, um allen zu helfen, sich besser zu kleiden.",
             missionTitle: "Unsere Mission",
-            mission: "Wir möchten Mode nachhaltiger machen, indem wir Menschen helfen, wiederzuentdecken, was sie bereits besitzen.",
+            mission: "Persönliches Styling demokratisieren und es für jeden mühelos machen, am besten auszusehen.",
             teamTitle: "Unser Team",
-            team: "Ein kleines Team von Designern, Ingenieuren und Modebegeisterten, die remote über die ganze Welt verteilt arbeiten."
+            team: "Ein leidenschaftliches Team aus Designern, Ingenieuren und Mode-Liebhabern, das weltweit remote arbeitet."
         },
         careers: {
-            intro: "Nous construisons l'avenir de la mode personnelle. Si vous aimez le design, les applications mobiles et une expérience d'achat plus intelligente, nous serions ravis de vous rencontrer.",
-            whyTitle: "Pourquoi travailler avec nous",
-            whyCopy: "Luvaa offre du travail à distance flexible, une culture collaborative et des opportunités d'influencer des produits utilisés par des milliers d'utilisateurs.",
-            openRoles: "Postes ouverts",
-            viewApply: "Voir & Postuler",
-            frontendSummary: "Gérer l'UI web et les performances. Construire des composants évolutifs et accessibles.",
-            mobileSummary: "Fournir des expériences mobiles natives et des flux de caméra/téléversement.",
-            mlSummary: "Travailler sur des systèmes de recommandation et de recherche pour personnaliser les suggestions de tenues.",
-            designerSummary: "Concevoir des parcours mobile-first, des prototypes et mener des recherches utilisateurs.",
-            contactCopy: "Vous pouvez également envoyer un e-mail à careers@luvaa.app avec votre CV et une courte note."
+            intro: "Wir bauen die Zukunft der persönlichen Mode. Wenn du Design und mobile Apps liebst, würden wir gerne von dir hören.",
+            whyTitle: "Warum Bei Uns Arbeiten",
+            whyCopy: "Flexibles Remote-Arbeiten, kreative Freiheit und die Chance, Millionen von Nutzern weltweit zu beeinflussen.",
+            openRoles: "Offene Stellen",
+            viewApply: "Ansehen & Bewerben",
+            frontendSummary: "Web UI und Performance verantworten.",
+            mobileSummary: "Native mobile Erlebnisse entwickeln.",
+            mlSummary: "An KI-Systemen für personalisierte Outfit-Vorschläge arbeiten.",
+            designerSummary: "Mobile-first Flows und Prototypen designen.",
+            contactCopy: "Mail an careers@luvaa.app mit deinem Lebenslauf."
+        },
+        contact: {
+            title: "Kontakt",
+            lead: "Fragen? Kontaktiere uns unter hello@luvaa.app.",
+            form: {
+                name: "Name",
+                email: "E-Mail",
+                message: "Nachricht",
+                send: "Senden"
+            }
+        },
+        blogPage: {
+            title: "Blog",
+            lead: "Geschichten und Stiltipps vom Luvaa Team."
+        },
+        blog: {
+            featured: {
+                title: "Empfohlen: Garderobe Auffrischen",
+                body: "Lerne praktische Schritte um deinen Kleiderschrank zu ordnen."
+            }
+        },
+        legal: {
+            privacyTitle: "Datenschutz",
+            termsTitle: "Nutzungsbedingungen",
+            contactTitle: "Kontakt"
+        },
+        featuresPage: {
+            title: "Funktionen",
+            lead: "Entdecke alle leistungsstarken Tools die Luvaa bietet."
         }
     },
     fr: {
@@ -628,17 +671,104 @@ const translations = {
             features: "Fonctionnalités",
             pricing: "Tarifs",
             blog: "Blog",
-            about: "À propos",
+            about: "À Propos",
             careers: "Carrières"
         },
-        press: {
-            title: "Presse & Médias",
-            lead: "Pour les demandes de presse, les assets haute résolution ou les partenariats, contactez press@luvaa.app.",
-            kitTitle: "Kit de presse",
-            kitDesc: "Notre kit de presse comprend des logos, captures d'écran et biographies."
+        hero: {
+            badge: "Votre Conseiller Style Personnel",
+            title1: "Habillez-vous Mieux.",
+            titleHighlight: "Sentez-vous Incroyable.",
+            subtitle: "L'application mode propulsée par l'IA qui note vos tenues, suggère quoi porter et vous aide à découvrir votre style unique. Rejoignez 10 000+ utilisateurs.",
+            downloadOn: "Télécharger sur",
+            getItOn: "TÉLÉCHARGER SUR",
+            scroll: "Défiler pour explorer"
+        },
+        stats: {
+            users: "Utilisateurs",
+            outfits: "Tenues",
+            rating: "Note App"
+        },
+        features: {
+            badge: "Fonctionnalités Puissantes",
+            title: "Tout Ce Dont Vous Avez Besoin",
+            subtitle: "Six fonctionnalités révolutionnaires conçues pour transformer comment vous vous habillez et vous exprimez.",
+            learnMore: "En savoir plus",
+            rateFit: {
+                title: "Notez Ma Tenue",
+                tagline: "Feedback honnête instantané",
+                description: "Prenez une photo de votre tenue et obtenez une note honnête instantanée. Nous vous donnons des conseils pour améliorer votre look."
+            },
+            styleGenie: {
+                title: "Génie du Style",
+                tagline: "'Je n'ai rien à me mettre' c'est fini",
+                description: "Dites au Génie du Style où vous allez et il créera instantanément la tenue parfaite depuis votre garde-robe digitale."
+            },
+            inspiration: {
+                title: "Inspiration Infinie",
+                tagline: "Plus jamais sans inspiration",
+                description: "Parcourez des milliers d'idées de tenues sublimes de notre communauté mondiale. Filtrez par style, saison ou occasion."
+            },
+            studio: {
+                title: "Essayez Avant de Porter",
+                tagline: "Votre cabine d'essayage virtuelle",
+                description: "Mixez et associez vos vêtements sur un canvas digital. Combinez vestes, changez de chaussures et testez les accessoires."
+            },
+            marketplace: {
+                title: "Achetez Le Look",
+                tagline: "Trouvez ce qui vous manque",
+                description: "Vous aimez une tenue mais il vous manque une pièce clé? Notre marketplace vous connecte à des pièces uniques."
+            },
+            fashionDna: {
+                title: "ADN Mode",
+                tagline: "Découvrez votre style unique",
+                description: "Faites notre quiz interactif pour décoder votre ADN Mode personnel. Comprenez votre esthétique fondamentale."
+            }
+        },
+        howItWorks: {
+            badge: "Simple & Facile",
+            title: "Commencez en Minutes",
+            subtitle: "Quatre étapes simples pour transformer votre garde-robe",
+            step1Title: "Téléchargez l'App",
+            step1Desc: "Gratuit sur iOS et Android",
+            step2Title: "Photographiez Vos Vêtements",
+            step2Desc: "Construisez votre garde-robe digitale",
+            step3Title: "Recevez des Conseils",
+            step3Desc: "Suggestions personnalisées",
+            step4Title: "Soyez Sublime",
+            step4Desc: "Sortez avec confiance"
+        },
+        testimonials: {
+            badge: "Adoré par les Utilisateurs",
+            title: "Vraies Personnes, Vrais Résultats",
+            quote1: "Luvaa a complètement changé comment je m'habille. Les notes de tenues sont parfaites!",
+            quote2: "Le Génie du Style est comme avoir un styliste personnel dans ma poche.",
+            quote3: "J'ai découvert mon style personnel grâce au quiz ADN Mode!",
+            quote4: "Enfin trouvé mon esthétique. Le fil d'inspiration est incroyable!",
+            quote5: "La fonction Studio m'a sauvé de tant de mauvais choix de tenues.",
+            quote6: "J'ai vendu des articles que je ne portais jamais et trouvé des pièces uniques!"
+        },
+        trust: {
+            secure: "Sécurisé & Privé",
+            privacy: "Données Protégées",
+            free: "Téléchargement Gratuit"
+        },
+        cta: {
+            title: "Prêt à Transformer Votre Style?",
+            subtitle: "Rejoignez des milliers d'utilisateurs qui ont déjà découvert leurs meilleurs looks.",
+            download: "Télécharger Gratuitement",
+            pricing: "Voir les Tarifs"
+        },
+        premium: {
+            title: "Débloquez Plus avec Luvaa Credits",
+            aiOutfits: "Générez des tenues avec l'IA",
+            bgRemoval: "Suppression d'arrière-plan pro",
+            virtualTryOn: "Essayage virtuel avec l'IA",
+            analytics: "Analyses de style avancées",
+            templates: "Templates de tenues exclusifs",
+            cta: "Voir les Tarifs"
         },
         pricing: {
-            title: "Tarifs",
+            title: "Tarifs Simples et Transparents",
             lead: "Pas d'abonnement. Pas de crédits expirants. Payez à l'utilisation.",
             features: {
                 noRecurring: "Pas de frais récurrents",
@@ -650,135 +780,34 @@ const translations = {
                     title: "Starter Pack",
                     price: "$2.99",
                     credits: "10 Crédits IA",
-                    desc: "Idéal pour essayer.",
+                    desc: "Parfait pour essayer.",
                     value: ""
                 },
                 popular: {
                     title: "Popular Pack",
                     price: "$4.99",
                     credits: "25 Crédits IA",
-                    desc: "Parfait pour les changements de saison.",
+                    desc: "Idéal pour le styling régulier.",
                     value: "Économisez ~30%"
                 },
                 pro: {
                     title: "Pro Pack",
                     price: "$9.99",
                     credits: "60 Crédits IA",
-                    desc: "Pour les créateurs de mode & utilisateurs avancés.",
-                    value: "Meilleure valeur (Économisez ~45%)"
+                    desc: "Pour les passionnés de mode.",
+                    value: "Meilleur Rapport (Économisez ~45%)"
                 }
             }
         },
-        featuresPage: {
-            title: "Fonctionnalités",
-            lead: "Luvaa vous aide à découvrir, organiser et échanger de la mode grâce à des suggestions intelligentes et une place de marché communautaire."
-        },
-        legal: {
-            privacyTitle: "Politique de confidentialité",
-            termsTitle: "Conditions d'utilisation",
-            contactTitle: "Contact",
-            termsSummary: "Ces conditions régissent l'utilisation du site Web et des services de Luvaa.",
-            userContentTitle: "Contenu utilisateur",
-            userContent: "Les utilisateurs conservent la propriété des images qu'ils téléchargent mais accordent à Luvaa une licence pour afficher et traiter le contenu.",
-            privacySummary: "Votre vie privée compte pour nous. Luvaa collecte des informations de compte et des données de garde-robe pour fournir des fonctionnalités de personnalisation et de marché.",
-            dataUseTitle: "Utilisation des données",
-            dataUse: "Nous utilisons les photos de garde-robe pour générer des tags et des suggestions. Les données agrégées et anonymisées améliorent les recommandations."
-        },
-        contact: {
-            title: "Contact",
-            lead: "Des questions ? Contactez-nous à hello@luvaa.app ou utilisez le formulaire ci-dessous.",
-            form: {
-                name: "Nom",
-                email: "E-mail",
-                message: "Message",
-                send: "Envoyer"
-            }
-        },
-        blogPage: {
-            title: "Blog",
-            lead: "Histoires, mises à jour et perspectives de l'équipe Luvaa."
-        },
-        blog: {
-            featured: {
-                title: "En vedette: Comment rafraîchir votre garde-robe",
-                body: "Apprenez des étapes pratiques pour trier votre garde-robe, identifier les pièces à garder ou à vendre et créer de nouvelles tenues sans acheter davantage."
-            }
-        },
-        cta: {
-            tryOnWeb: "Essayer sur le Web"
-        },
-        hero: {
-            title1: "Votre garde-robe,",
-            titleHighlight: "Réinventée",
-            subtitle: "Luvaa est l'application qui inspire votre style, organise votre garde-robe et vous aide à acheter et vendre de la mode. Rejoignez 10 000+ utilisateurs et découvrez 300 000+ tenues.",
-            appPreview: "Aperçu de l'application"
-        },
-        stats: {
-            users: "Utilisateurs",
-            outfits: "Tenues",
-            items: "Articles en vente"
-        },
-        features: {
-            inspired: "Trouvez l'inspiration",
-            organize: "Organiser la garde-robe",
-            suggestions: "Suggestions intelligentes",
-            sell: "Vendre & Acheter",
-            digitalCloset: "Garde-robe Numérique",
-            digitalClosetDesc: "Téléchargez des photos de vos vêtements, taguez des articles et créez des collections.",
-            aiSuggestions: "Suggestions d'Outfits IA",
-            aiSuggestionsDesc: "Recommandations personnalisées basées sur votre garde-robe et le contexte.",
-            marketplace: "Vente & Marché",
-            marketplaceDesc: "Mettez des articles en vente avec suggestions de prix et connectez-vous avec des acheteurs.",
-            inspiration: "Fil d'inspiration",
-            inspirationDesc: "Découvrez des tenues de la communauté et enregistrez des looks.",
-            search: "Recherche Intelligente & Tags",
-            searchDesc: "Trouvez rapidement des articles par couleur, saison ou tags personnalisés.",
-            detailedTitle: "Tout ce dont vous avez besoin pour maîtriser votre style",
-            detailedSubtitle: "Des fonctionnalités puissantes conçues pour transformer votre interaction avec votre garde-robe",
-            smartRecommendations: "Suggestions de tenues personnalisées",
-            smartRecommendationsDesc: "Obtenez des suggestions de tenues adaptées à votre style. L'application apprend vos préférences et suggère des looks qui correspondent à votre goût, occasion et saison.",
-            organizeDigital: "Organisez votre garde-robe numériquement",
-            organizeDigitalDesc: "Téléchargez des photos de vos vêtements et accessoires. Les articles sont automatiquement catégorisés avec suppression d'arrière-plan, créant une garde-robe numérique consultable.",
-            mixMatch: "Mixez et associez en temps réel",
-            mixMatchDesc: "Glissez-déposez des articles pour créer des tenues sur un canevas virtuel. Expérimentez avec différentes combinaisons, arrière-plans et mises en page.",
-            intelligentAnalysis: "Analyse intelligente des tenues",
-            intelligentAnalysisDesc: "Obtenez des informations instantanées sur les couleurs, motifs, styles et occasions. Découvrez quelles pièces fonctionnent bien ensemble et obtenez des suggestions d'articles complémentaires.",
-            saveOrganize: "Enregistrez et organisez l'inspiration",
-            saveOrganizeDesc: "Créez des collections personnalisées pour différentes occasions, saisons ou humeurs. Enregistrez des tenues de notre flux organisé ou vos propres créations pour un accès facile plus tard.",
-            shopSimilar: "Achetez des articles similaires",
-            shopSimilarDesc: "Vous aimez une tenue mais ne possédez pas les pièces? Parcourez notre marché intégré pour trouver des articles similaires ou listez vos propres vêtements pour que d'autres les découvrent.",
-            findInstantly: "Trouvez tout instantanément",
-            findInstantlyDesc: "Recherchez par couleur, style, saison ou occasion. Notre recherche sémantique comprend les requêtes en langage naturel comme 'robe d'été décontractée' ou 'manteau d'hiver formel'.",
-            bgRemoval: "Suppression d'arrière-plan professionnelle",
-            bgRemovalDesc: "Téléchargez n'importe quelle photo de vêtement et notre IA supprime instantanément l'arrière-plan, créant des images propres de qualité catalogue parfaites pour votre garde-robe numérique."
-        },
-        premium: {
-            title: "Débloquez plus avec Luvaa Credits",
-            aiOutfits: "Générez des tenues avec l'IA (même avec vos propres photos!)",
-            bgRemoval: "Suppression d'arrière-plan professionnelle",
-            virtualTryOn: "Essayage virtuel avec l'IA",
-            analytics: "Analyses de style avancées",
-            templates: "Modèles de tenues exclusifs",
-            cta: "Voir les tarifs"
-        },
-        howItWorks: {
-            title: "Commencez en quelques minutes",
-            subtitle: "Quatre étapes simples pour transformer votre expérience de garde-robe",
-            step1Title: "Téléchargez l'application",
-            step1Desc: "Disponible sur iOS et Android",
-            step2Title: "Téléchargez vos premiers articles",
-            step2Desc: "Prenez des photos de vos vêtements",
-            step3Title: "Explorez les tenues organisées",
-            step3Desc: "Obtenez des recommandations personnalisées",
-            step4Title: "Créez votre premier look",
-            step4Desc: "Mixez et associez dans Studio"
-        },
-        testimonials: {
-            title: "Ce que disent nos utilisateurs"
+        press: {
+            title: "Presse & Médias",
+            lead: "Pour les demandes presse, contactez press@luvaa.app.",
+            kitTitle: "Kit Presse",
+            kitDesc: "Notre kit presse inclut logos et captures d'écran."
         },
         footer: {
             company: {
-                about: "À propos",
+                about: "À Propos",
                 careers: "Carrières",
                 press: "Presse"
             },
@@ -788,187 +817,202 @@ const translations = {
                 blog: "Blog"
             },
             legal: {
-                privacy: "Politique de confidentialité",
+                privacy: "Confidentialité",
                 terms: "Conditions d'utilisation",
                 contact: "Contact"
             },
             copyright: "© {year} Luvaa. Tous droits réservés."
         },
         about: {
-            title: "À propos de Luvaa",
-            lead: "Luvaa a commencé comme un projet passion pour repenser la façon dont les gens interagissent avec leur garde-robe.",
-            lead2: "Notre produit combine un design intuitif et le machine learning pour proposer des tenues adaptées au goût et à l'occasion.",
+            title: "À Propos de Luvaa",
+            lead: "Luvaa est né d'une frustration simple: se tenir devant une garde-robe pleine et avoir l'impression de n'avoir rien à porter.",
+            lead2: "Nous construisons le futur de la mode personnelle—en utilisant l'IA pour aider tout le monde à mieux s'habiller.",
             missionTitle: "Notre Mission",
-            mission: "Nous visons à rendre la mode plus durable en aidant les gens à redécouvrir ce qu'ils possèdent déjà.",
+            mission: "Démocratiser le styling personnel et rendre le fait d'être à son meilleur sans effort pour tous.",
             teamTitle: "Notre Équipe",
-            team: "Une petite équipe de designers, d'ingénieurs et de passionnés de mode travaillant à distance dans le monde entier."
+            team: "Une équipe passionnée de designers, ingénieurs et amoureux de la mode travaillant à distance à travers le monde."
         },
         careers: {
-            intro: "Kişisel modanın geleceğini inşa ediyoruz. Tasarımı, mobil uygulamaları ve daha akıllı alışveriş deneyimlerini seviyorsanız, sizden haber almayı isteriz.",
-            whyTitle: "Neden Bizimle Çalışmalısınız",
-            whyCopy: "Luvaa esnek uzaktan çalışma, işbirlikçi bir kültür ve binlerce kullanıcı tarafından kullanılan ürünleri etkileme fırsatları sunar.",
-            openRoles: "Açık Pozisyonlar",
-            viewApply: "Görüntüle & Başvur",
-            frontendSummary: "Web UI ve performanstan sorumlu olun. Ölçeklenebilir, erişilebilir bileşenler oluşturun.",
-            mobileSummary: "Yerel hisli mobil deneyimler ve kamera/yükleme akışları sağlayın.",
-            mlSummary: "Kişiselleştirilmiş kıyafet önerileri için öneri ve retrieval sistemleri üzerinde çalışın.",
-            designerSummary: "Mobil öncelikli akışlar, prototipleme ve kullanıcı araştırması tasarlayın.",
-            contactCopy: "Alternatif olarak, özgeçmişinizi ve kısa bir notu careers@luvaa.app adresine e-posta ile gönderebilirsiniz."
+            intro: "Nous construisons le futur de la mode personnelle. Si vous aimez le design et les apps mobiles, nous serions ravis de vous rencontrer.",
+            whyTitle: "Pourquoi Travailler Avec Nous",
+            whyCopy: "Travail à distance flexible, liberté créative et la chance d'impacter des millions d'utilisateurs.",
+            openRoles: "Postes Ouverts",
+            viewApply: "Voir & Postuler",
+            frontendSummary: "Gérer l'UI web et la performance.",
+            mobileSummary: "Développer des expériences mobiles natives.",
+            mlSummary: "Travailler sur les systèmes d'IA pour des suggestions personnalisées.",
+            designerSummary: "Designer des flows mobile-first et prototypes.",
+            contactCopy: "Envoyez un email à careers@luvaa.app avec votre CV."
+        },
+        contact: {
+            title: "Contact",
+            lead: "Des questions? Contactez-nous à hello@luvaa.app.",
+            form: {
+                name: "Nom",
+                email: "Email",
+                message: "Message",
+                send: "Envoyer"
+            }
+        },
+        blogPage: {
+            title: "Blog",
+            lead: "Histoires et conseils style de l'équipe Luvaa."
+        },
+        blog: {
+            featured: {
+                title: "À la Une: Rafraîchir Votre Garde-robe",
+                body: "Apprenez des étapes pratiques pour organiser votre garde-robe."
+            }
+        },
+        legal: {
+            privacyTitle: "Confidentialité",
+            termsTitle: "Conditions d'utilisation",
+            contactTitle: "Contact"
+        },
+        featuresPage: {
+            title: "Fonctionnalités",
+            lead: "Découvrez tous les outils puissants que Luvaa offre."
         }
     },
     tr: {
         nav: {
             home: "Ana Sayfa",
             features: "Özellikler",
-            pricing: "Fiyatlandırma",
+            pricing: "Fiyatlar",
             blog: "Blog",
             about: "Hakkında",
             careers: "Kariyer"
         },
-        press: {
-            title: "Basın & Medya",
-            lead: "Basın talepleri, yüksek çözünürlüklü varlıklar veya ortaklık fırsatları için press@luvaa.app adresiyle iletişime geçin.",
-            kitTitle: "Basın Kiti",
-            kitDesc: "Basın kitimiz logolar, ekran görüntüleri ve yönetici biyografilerini içerir."
+        hero: {
+            badge: "Kişisel Stil Danışmanınız",
+            title1: "Daha İyi Giyin.",
+            titleHighlight: "Harika Hissedin.",
+            subtitle: "Kıyafetlerinizi değerlendiren, ne giyeceğinizi öneren ve benzersiz stilinizi keşfetmenize yardımcı olan yapay zeka destekli moda uygulaması. 10.000+ kullanıcıya katılın.",
+            downloadOn: "İndir:",
+            getItOn: "İNDİR:",
+            scroll: "Keşfetmek için kaydırın"
+        },
+        stats: {
+            users: "Kullanıcı",
+            outfits: "Kombin",
+            rating: "Uygulama Puanı"
+        },
+        features: {
+            badge: "Güçlü Özellikler",
+            title: "İhtiyacınız Olan Her Şey",
+            subtitle: "Giyinme ve kendinizi ifade etme şeklinizi dönüştürmek için tasarlanmış altı çığır açan özellik.",
+            learnMore: "Daha fazla",
+            rateFit: {
+                title: "Kombinimi Değerlendir",
+                tagline: "Anında dürüst geri bildirim alın",
+                description: "Kombininizin fotoğrafını çekin ve anında dürüst bir değerlendirme alın. Size sadece puan vermiyoruz—görünümünüzü nasıl geliştireceğiniz konusunda ipuçları veriyoruz."
+            },
+            styleGenie: {
+                title: "Stil Cini",
+                tagline: "'Giyecek hiçbir şeyim yok' sona erdi",
+                description: "Stil Cini'ne nereye gittiğinizi söyleyin ve dijital dolabınızdan anında mükemmel kombini oluştursun."
+            },
+            inspiration: {
+                title: "Sonsuz İlham",
+                tagline: "Bir daha asla ilhamsız kalmayın",
+                description: "Küresel topluluğumuzdan binlerce muhteşem kombin fikrine göz atın. Stil, mevsim veya duruma göre filtreleyin."
+            },
+            studio: {
+                title: "Giymeden Önce Dene",
+                tagline: "Sanal deneme kabininiz",
+                description: "Kıyafetlerinizi dijital bir tuval üzerinde karıştırıp eşleştirin. Ceketleri birleştirin, ayakkabıları değiştirin ve aksesuarları test edin."
+            },
+            marketplace: {
+                title: "Kombini Satın Al",
+                tagline: "Eksik olanı bulun",
+                description: "Beğendiğiniz bir kombin mi gördünüz ama size anahtar parça mı eksik? Pazarımız sizi benzersiz parçalarla buluşturur."
+            },
+            fashionDna: {
+                title: "Moda DNA'sı",
+                tagline: "Benzersiz stilinizi keşfedin",
+                description: "Kişisel Moda DNA'nızı çözmek için interaktif testimizi yapın. Temel estetiğinizi anlayın."
+            }
+        },
+        howItWorks: {
+            badge: "Basit ve Kolay",
+            title: "Dakikalar İçinde Başlayın",
+            subtitle: "Gardırobunuzu dönüştürmek için dört basit adım",
+            step1Title: "Uygulamayı İndirin",
+            step1Desc: "iOS ve Android'de ücretsiz",
+            step2Title: "Kıyafetlerinizi Fotoğraflayın",
+            step2Desc: "Dijital gardırobunuzu oluşturun",
+            step3Title: "Stil Önerileri Alın",
+            step3Desc: "Kişiselleştirilmiş öneriler",
+            step4Title: "Harika Görünün",
+            step4Desc: "Özgüvenle dışarı çıkın"
+        },
+        testimonials: {
+            badge: "Kullanıcılar Tarafından Seviliyor",
+            title: "Gerçek İnsanlar, Gerçek Sonuçlar",
+            quote1: "Luvaa giyinme şeklimi tamamen değiştirdi. Kombin değerlendirmeleri mükemmel!",
+            quote2: "Stil Cini cebimde kişisel bir stilist gibi.",
+            quote3: "Moda DNA testi sayesinde kişisel stilimi keşfettim!",
+            quote4: "Sonunda estetiğimi buldum. İlham akışı inanılmaz!",
+            quote5: "Stüdyo özelliği beni çok sayıda kötü kombin kararından kurtardı.",
+            quote6: "Hiç giymediğim eşyaları sattım ve benzersiz parçalar buldum!"
+        },
+        trust: {
+            secure: "Güvenli ve Özel",
+            privacy: "Verileriniz Korunuyor",
+            free: "Ücretsiz İndirin"
+        },
+        cta: {
+            title: "Stilinizi Dönüştürmeye Hazır mısınız?",
+            subtitle: "En iyi görünümlerini zaten keşfetmiş binlerce kullanıcıya katılın.",
+            download: "Ücretsiz İndir",
+            pricing: "Fiyatları Görüntüle"
+        },
+        premium: {
+            title: "Luvaa Kredileriyle Daha Fazlasını Açın",
+            aiOutfits: "AI ile kombinler oluşturun",
+            bgRemoval: "Profesyonel arka plan kaldırma",
+            virtualTryOn: "AI ile sanal deneme",
+            analytics: "Gelişmiş stil analizleri",
+            templates: "Özel kombin şablonları",
+            cta: "Fiyatları Görüntüle"
         },
         pricing: {
-            title: "Fiyatlandırma",
-            lead: "Abonelik yok. Süresi dolan krediler yok. Sadece kullandıkça öde.",
+            title: "Basit, Şeffaf Fiyatlandırma",
+            lead: "Abonelik yok. Süresi dolan kredi yok. Sadece kullandığın kadar öde.",
             features: {
-                noRecurring: "Tekrarlayan ücret yok",
-                noExpiry: "Kredilerin süresi asla dolmaz",
+                noRecurring: "Yinelenen ücret yok",
+                noExpiry: "Krediler asla sona ermez",
                 free: "Ücretsiz özellikler dahil"
             },
             pack: {
                 starter: {
-                    title: "Starter Pack",
+                    title: "Başlangıç Paketi",
                     price: "$2.99",
                     credits: "10 AI Kredisi",
-                    desc: "Denemek için en iyisi.",
+                    desc: "Denemek için mükemmel.",
                     value: ""
                 },
                 popular: {
-                    title: "Popular Pack",
+                    title: "Popüler Paket",
                     price: "$4.99",
                     credits: "25 AI Kredisi",
-                    desc: "Mevsimlik gardırop yenilemeleri için.",
-                    value: "%30 Tasarruf Edin"
+                    desc: "Düzenli stil için en iyisi.",
+                    value: "~%30 Tasarruf"
                 },
                 pro: {
-                    title: "Pro Pack",
+                    title: "Pro Paket",
                     price: "$9.99",
                     credits: "60 AI Kredisi",
-                    desc: "Moda yaratıcıları ve sık kullanıcılar için.",
-                    value: "En İyi Değer (%45 Tasarruf Edin)"
+                    desc: "Moda tutkunları için.",
+                    value: "En İyi Değer (~%45 Tasarruf)"
                 }
             }
         },
-        featuresPage: {
-            title: "Özellikler",
-            lead: "Luvaa, akıllı öneriler ve topluluk odaklı bir pazar yeri ile modayı keşfetmenize, düzenlemenize ve takas etmenize yardımcı olur."
-        },
-        legal: {
-            privacyTitle: "Gizlilik Politikası",
-            termsTitle: "Hizmet Şartları",
-            contactTitle: "İletişim",
-            termsSummary: "Bu şartlar Luvaa'nin web sitesi ve hizmetlerinin kullanımını düzenler.",
-            userContentTitle: "Kullanıcı İçeriği",
-            userContent: "Kullanıcılar yükledikleri görsellerin sahipliğini korur, ancak Luvaa'nin hizmetleri sağlamak için görüntülemeye ve işlemeye yönelik bir lisans verir.",
-            privacySummary: "Gizliliğiniz bizim için önemlidir. Luvaa, kişiselleştirme ve pazar yeri özellikleri sağlamak için hesap bilgileri ve dolap verileri toplar.",
-            dataUseTitle: "Veri Kullanımı",
-            dataUse: "Dolap fotoğraflarını etiketler ve öneriler oluşturmak için kullanıyoruz. Toplu, anonim veriler önerileri geliştirmeye yardımcı olur."
-        },
-        contact: {
-            title: "İletişim",
-            lead: "Sorularınız mı var? Bize hello@luvaa.app adresinden ulaşın veya aşağıdaki formu kullanın.",
-            form: {
-                name: "İsim",
-                email: "E-posta",
-                message: "Mesaj",
-                send: "Mesaj Gönder"
-            }
-        },
-        blogPage: {
-            title: "Blog",
-            lead: "Luvaa ekibinden hikayeler, güncellemeler ve içgörüler."
-        },
-        blog: {
-            featured: {
-                title: "Öne Çıkan: Gardırobunuzu Nasıl Yenilersiniz",
-                body: "Dolabınızı düzenlemek, saklanacak veya satılacak parçaları belirlemek ve daha fazla satın almadan yeni kıyafetler oluşturmak için pratik adımları öğrenin."
-            }
-        },
-        cta: {
-            tryOnWeb: "Web'de dene"
-        },
-        hero: {
-            title1: "Dolabınız,",
-            titleHighlight: "Yeniden Hayal Edildi",
-            subtitle: "Luvaa, tarzınızı ilham veren, dolabınızı düzenleyen ve moda alım-satımında yardımcı olan uygulamadır. 10.000+ kullanıcıya katılın ve 300.000+ kıyafet keşfedin.",
-            appPreview: "Uygulama Önizlemesi"
-        },
-        stats: {
-            users: "Kullanıcılar",
-            outfits: "Kıyafetler",
-            items: "Satıştaki Ürünler"
-        },
-        features: {
-            inspired: "İlham Alın",
-            organize: "Dolabı Düzenle",
-            suggestions: "Akıllı Öneriler",
-            sell: "Sat & Satın Al",
-            digitalCloset: "Dijital Dolap",
-            digitalClosetDesc: "Kıyafetlerinizin fotoğraflarını yükleyin, öğeleri etiketleyin ve koleksiyonlar oluşturun.",
-            aiSuggestions: "AI Kıyafet Önerileri",
-            aiSuggestionsDesc: "Dolabınıza ve bağlama göre kişiselleştirilmiş öneriler.",
-            marketplace: "Satış & Pazar Yeri",
-            marketplaceDesc: "Fiyat önerileri ile ürünlerinizi listeleyin ve alıcılarla bağlantı kurun.",
-            inspiration: "İlham Akışı",
-            inspirationDesc: "Topluluktan kıyafetler keşfedin ve beğendiğiniz görünümleri kaydedin.",
-            search: "Akıllı Arama & Etiketler",
-            searchDesc: "Renk, sezon veya özel etiketlere göre öğeleri hızlıca bulun.",
-            detailedTitle: "Tarzınızda Ustalaşmak İçin İhtiyacınız Olan Her Şey",
-            detailedSubtitle: "Gardırobunuzla etkileşiminizi dönüştürmek için tasarlanmış güçlü özellikler",
-            smartRecommendations: "Kişiselleştirilmiş Kıyafet Önerileri",
-            smartRecommendationsDesc: "Tarzınıza uygun kıyafet önerileri alın. Uygulama tercihlerinizi öğrenir ve zevkinize, durumunuza ve mevsime uygun görünümler önerir.",
-            organizeDigital: "Dolabınızı Dijital Olarak Düzenleyin",
-            organizeDigitalDesc: "Kıyafetlerinizin ve aksesuarlarınızın fotoğraflarını yükleyin. Öğeler otomatik olarak kategorize edilir ve arka planlar kaldırılır, her yerden erişilebilen aranabilir bir dijital gardırop oluşturulur.",
-            mixMatch: "Gerçek Zamanlı Mix & Match",
-            mixMatchDesc: "Sanal bir tuvalde kıyafetler oluşturmak için öğeleri sürükleyip bırakın. Bir görünüme karar vermeden önce farklı kombinasyonlar, arka planlar ve düzenlerle denemeler yapın.",
-            intelligentAnalysis: "Akıllı Kıyafet Analizi",
-            intelligentAnalysisDesc: "Renkler, desenler, stiller ve durumlar hakkında anında içgörüler edinin. Hangi parçaların iyi çalıştığını keşfedin ve tamamlayıcı öğeler için öneriler alın.",
-            saveOrganize: "İlhamı Kaydedin ve Düzenleyin",
-            saveOrganizeDesc: "Farklı durumlar, mevsimler veya ruh halleri için özel koleksiyonlar oluşturun. Daha sonra kolay erişim için düzenlenmiş akışımızdan veya kendi kreasyonlarınızdan kıyafetleri kaydedin.",
-            shopSimilar: "Benzer Ürünleri Satın Alın",
-            shopSimilarDesc: "Bir kıyafeti seviyor ama parçalara sahip değil misiniz? Benzer öğeleri bulmak için entegre pazarımıza göz atın veya başkalarının keşfetmesi için kendi kıyafetlerinizi listeleyin.",
-            findInstantly: "Her Şeyi Anında Bulun",
-            findInstantlyDesc: "Renk, stil, mevsim veya duruma göre arama yapın. Semantik aramam 'gündelik yaz elbisesi' veya 'resmi kış paltosu' gibi doğal dil sorgularını anlar.",
-            bgRemoval: "Profesyonel Arka Plan Kaldırma",
-            bgRemovalDesc: "Herhangi bir giysi fotoğrafı yükleyin ve AI'mız anında arka planı kaldırır, dijital gardırobunuz için mükemmel temiz, katalog kalitesinde görüntüler oluşturur."
-        },
-        premium: {
-            title: "Luvaa Kredileri ile Daha Fazlasını Açın",
-            aiOutfits: "AI ile kıyafet oluşturun (kendi fotoğraflarınızla bile!)",
-            bgRemoval: "Profesyonel arka plan kaldırma",
-            virtualTryOn: "AI ile sanal deneme",
-            analytics: "Gelişmiş stil içgörüleri",
-            templates: "Özel kıyafet şablonları",
-            cta: "Fiyatlandırmayı Görün"
-        },
-        howItWorks: {
-            title: "Dakikalar İçinde Başlayın",
-            subtitle: "Gardırop deneyiminizi dönüştürmek için dört basit adım",
-            step1Title: "Uygulamayı indirin",
-            step1Desc: "iOS ve Android'de mevcut",
-            step2Title: "İlk öğelerinizi yükleyin",
-            step2Desc: "Kıyafetlerinizin fotoğraflarını çekin",
-            step3Title: "Seçilmiş kıyafetleri keşfedin",
-            step3Desc: "Kişiselleştirilmiş öneriler alın",
-            step4Title: "İlk görünümünüzü oluşturun",
-            step4Desc: "Studio'da mix ve match yapın"
-        },
-        testimonials: {
-            title: "Kullanıcılarımız Ne Diyor"
+        press: {
+            title: "Basın & Medya",
+            lead: "Basın soruları için press@luvaa.app ile iletişime geçin.",
+            kitTitle: "Basın Kiti",
+            kitDesc: "Basın kitimiz logo ve ekran görüntüleri içerir."
         },
         footer: {
             company: {
@@ -978,82 +1022,130 @@ const translations = {
             },
             product: {
                 features: "Özellikler",
-                pricing: "Fiyatlandırma",
+                pricing: "Fiyatlar",
                 blog: "Blog"
             },
             legal: {
                 privacy: "Gizlilik Politikası",
-                terms: "Hizmet Şartları",
+                terms: "Kullanım Şartları",
                 contact: "İletişim"
             },
             copyright: "© {year} Luvaa. Tüm hakları saklıdır."
         },
         about: {
             title: "Luvaa Hakkında",
-            lead: "Luvaa, insanların gardıroplarıyla nasıl etkileşimde bulunduğunu yeniden tasarlamak için bir tutku projesi olarak başladı.",
-            lead2: "Ürünümüz, kişisel zevk ve duruma göre kıyafet önerileri sunmak için sezgisel tasarımı makine öğrenimi ile birleştirir.",
+            lead: "Luvaa basit bir hayal kırıklığından doğdu: Dolu bir gardırobun önünde durup giyecek hiçbir şeyiniz yokmuş gibi hissetmek.",
+            lead2: "Kişisel modanın geleceğini inşa ediyoruz—herkesin daha iyi giyinmesine yardımcı olmak için yapay zeka kullanıyoruz.",
             missionTitle: "Misyonumuz",
-            mission: "İnsanların zaten sahip olduklarını yeniden keşfetmelerine yardımcı olarak modayı daha sürdürülebilir hale getirmeyi amaçlıyoruz.",
+            mission: "Kişisel stillendirmeyi demokratikleştirmek ve herkesin en iyi göründüğü hali zahmetsiz hale getirmek.",
             teamTitle: "Ekibimiz",
-            team: "Dünya çapında uzaktan çalışan küçük bir tasarımcı, mühendis ve moda meraklıları ekibi."
+            team: "Dünya genelinde uzaktan çalışan tutkulu tasarımcılar, mühendisler ve moda severlerden oluşan bir ekip."
+        },
+        careers: {
+            intro: "Kişisel modanın geleceğini inşa ediyoruz. Tasarım ve mobil uygulamaları seviyorsanız, sizden haber almak isteriz.",
+            whyTitle: "Neden Bizimle Çalışmalısınız",
+            whyCopy: "Esnek uzaktan çalışma, yaratıcı özgürlük ve dünya çapında milyonlarca kullanıcıyı etkileme şansı.",
+            openRoles: "Açık Pozisyonlar",
+            viewApply: "Görüntüle & Başvur",
+            frontendSummary: "Web UI ve performansı yönetin.",
+            mobileSummary: "Yerel mobil deneyimler geliştirin.",
+            mlSummary: "Kişiselleştirilmiş öneriler için AI sistemleri üzerinde çalışın.",
+            designerSummary: "Mobil öncelikli akışlar ve prototipler tasarlayın.",
+            contactCopy: "CV'niz ile careers@luvaa.app adresine e-posta gönderin."
+        },
+        contact: {
+            title: "İletişim",
+            lead: "Sorularınız mı var? hello@luvaa.app adresinden bize ulaşın.",
+            form: {
+                name: "İsim",
+                email: "E-posta",
+                message: "Mesaj",
+                send: "Gönder"
+            }
+        },
+        blogPage: {
+            title: "Blog",
+            lead: "Luvaa ekibinden hikayeler ve stil ipuçları."
+        },
+        blog: {
+            featured: {
+                title: "Öne Çıkan: Gardırobunuzu Yenileyin",
+                body: "Gardırobunuzu düzenlemek için pratik adımları öğrenin."
+            }
+        },
+        legal: {
+            privacyTitle: "Gizlilik Politikası",
+            termsTitle: "Kullanım Şartları",
+            contactTitle: "İletişim"
+        },
+        featuresPage: {
+            title: "Özellikler",
+            lead: "Luvaa'nın sunduğu tüm güçlü araçları keşfedin."
         }
     }
 };
-const I18nContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(null);
+const I18nContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+function useI18n() {
+    const ctx = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(I18nContext);
+    if (!ctx) throw new Error("useI18n must be used within I18nProvider");
+    return ctx;
+}
 function I18nProvider({ children }) {
-    const [locale, setLocaleState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>{
-        try {
-            const saved = ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : null;
-            return saved || "en";
-        } catch (e) {
-            return "en";
-        }
-    });
+    const [locale, setLocaleState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("en");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        try {
-            localStorage.setItem("locale", locale);
-        } catch (e) {}
+        const stored = ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : null;
+        if (stored && [
+            "en",
+            "nl",
+            "de",
+            "fr",
+            "tr"
+        ].includes(stored)) //TURBOPACK unreachable
+        ;
+    }, []);
+    function setLocale(l) {
+        setLocaleState(l);
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+    }
+    const t = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return (key)=>{
+            const parts = key.split(".");
+            let result = translations[locale];
+            for (const p of parts){
+                if (result && typeof result === "object" && p in result) {
+                    result = result[p];
+                } else {
+                    return key;
+                }
+            }
+            return typeof result === "string" ? result : key;
+        };
     }, [
         locale
     ]);
-    const setLocale = (l)=>setLocaleState(l);
-    const availableLocales = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>[
-            {
-                code: "en",
-                label: "English"
-            },
-            {
-                code: "nl",
-                label: "Nederlands"
-            },
-            {
-                code: "de",
-                label: "Deutsch"
-            },
-            {
-                code: "fr",
-                label: "Français"
-            },
-            {
-                code: "tr",
-                label: "Türkçe"
-            }
-        ], []);
-    const t = (key, vars)=>{
-        const parts = key.split(".");
-        let cur = translations[locale] || translations["en"];
-        for (const p of parts){
-            if (!cur) break;
-            cur = cur[p];
+    const availableLocales = [
+        {
+            code: "en",
+            label: "English"
+        },
+        {
+            code: "nl",
+            label: "Nederlands"
+        },
+        {
+            code: "de",
+            label: "Deutsch"
+        },
+        {
+            code: "fr",
+            label: "Français"
+        },
+        {
+            code: "tr",
+            label: "Türkçe"
         }
-        let out = typeof cur === "undefined" ? key : String(cur);
-        if (vars) {
-            for (const k of Object.keys(vars)){
-                out = out.replace(`{${k}}`, String(vars[k]));
-            }
-        }
-        return out;
-    };
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(I18nContext.Provider, {
         value: {
             locale,
@@ -1064,16 +1156,10 @@ function I18nProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/I18nProvider.tsx",
-        lineNumber: 1029,
+        lineNumber: 873,
         columnNumber: 5
     }, this);
 }
-function useI18n() {
-    const ctx = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(I18nContext);
-    if (!ctx) throw new Error("useI18n must be used within I18nProvider");
-    return ctx;
-}
-const __TURBOPACK__default__export__ = I18nProvider;
 }),
 "[project]/src/components/Header.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -1198,15 +1284,6 @@ function Header() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-3",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://app.luvaa.app",
-                                className: "bg-[#ed754f] text-white px-4 py-2 rounded-full text-sm",
-                                children: t('cta.tryOnWeb')
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 43,
-                                columnNumber: 11
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 ref: langRef,
                                 className: "hidden md:block relative",
