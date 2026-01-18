@@ -37,6 +37,18 @@ export default function Header() {
     };
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   const navLinks = [
     { href: '/', label: t('nav.home') },
     { href: '/pricing', label: t('nav.pricing') },
@@ -56,8 +68,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100'
-          : 'bg-transparent'
+        ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100'
+        : 'bg-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,8 +92,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
-                      ? 'text-[#ec547c]'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/80'
+                    ? 'text-[#ec547c]'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/80'
                     }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
@@ -104,8 +116,8 @@ export default function Header() {
                 aria-label={`Language: ${availableLocales.find((l) => l.code === locale)?.label || 'English'}`}
                 onClick={() => setLangOpen((s) => !s)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-full text-sm font-medium transition-all duration-200 ${langOpen
-                    ? 'bg-gray-100 text-gray-900'
-                    : 'text-gray-600 hover:bg-gray-100/80 hover:text-gray-900'
+                  ? 'bg-gray-100 text-gray-900'
+                  : 'text-gray-600 hover:bg-gray-100/80 hover:text-gray-900'
                   }`}
               >
                 <Globe className="w-4 h-4" />
@@ -121,8 +133,8 @@ export default function Header() {
                         <button
                           onClick={() => { setLocale(l.code); setLangOpen(false); }}
                           className={`w-full text-left px-4 py-2.5 flex items-center gap-3 transition-colors ${locale === l.code
-                              ? 'bg-[#ec547c]/5 text-[#ec547c]'
-                              : 'text-gray-700 hover:bg-gray-50'
+                            ? 'bg-[#ec547c]/5 text-[#ec547c]'
+                            : 'text-gray-700 hover:bg-gray-50'
                             }`}
                         >
                           <span className="text-xl">{flags[l.code]}</span>
@@ -169,7 +181,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden fixed inset-0 top-[72px] bg-white/95 backdrop-blur-xl z-40 animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden fixed inset-0 top-[72px] bg-white z-40 animate-in fade-in slide-in-from-top-4 duration-300 overflow-y-auto">
           <div className="max-w-lg mx-auto px-6 py-8">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => {
@@ -180,8 +192,8 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className={`px-4 py-3 rounded-2xl text-lg font-medium transition-all ${isActive
-                        ? 'bg-[#ec547c]/10 text-[#ec547c]'
-                        : 'text-gray-700 hover:bg-gray-100'
+                      ? 'bg-[#ec547c]/10 text-[#ec547c]'
+                      : 'text-gray-700 hover:bg-gray-100'
                       }`}
                   >
                     {link.label}
@@ -199,8 +211,8 @@ export default function Header() {
                     key={l.code}
                     onClick={() => { setLocale(l.code); setOpen(false); }}
                     className={`flex items-center gap-2 px-4 py-3 rounded-xl transition-all ${locale === l.code
-                        ? 'bg-[#ec547c]/10 text-[#ec547c]'
-                        : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                      ? 'bg-[#ec547c]/10 text-[#ec547c]'
+                      : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                       }`}
                   >
                     <span className="text-xl">{flags[l.code]}</span>

@@ -1,16 +1,8 @@
-[00:00:02.121] Server  LOG      ✓ Ready in 1537ms
-[00:00:54.320] Server  LOG      ○ Compiling / ...
-[00:00:54.794] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:55.593] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:14.075] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/components/I18nProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:01:14.086] Server  LOG      ✓ Compiled in 170ms
-[00:01:14.557] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:15.409] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:15.882] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:34.916] Server  LOG      ✓ Compiled in 437ms
-[00:02:10.015] Server  LOG      ✓ Compiled in 574ms
-[00:03:04.480] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/components/I18nProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:03:04.505] Server  LOG      ✓ Compiled in 87ms
-[00:03:04.898] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:03:05.667] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:03:05.800] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.217] Server  LOG      ✓ Ready in 1597ms
+[00:02:07.935] Server  LOG      ○ Compiling / ...
+[00:02:08.900] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:02:09.713] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:24.151] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:25.887] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:27.939] Server  LOG      ✓ Compiled in 250ms
+[00:03:59.281] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase

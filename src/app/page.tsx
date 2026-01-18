@@ -287,6 +287,70 @@ export default function Home() {
           );
         })()}
 
+        {/* App Screenshots Showcase - Right after Hero for visual impact */}
+        <AppShowcase />
+
+        {/* Social Proof / Testimonials - Build trust early */}
+        {(() => {
+          const { ref, visible } = useScrollFadeIn();
+          return (
+            <section
+              ref={ref}
+              className={`py-24 lg:py-32 px-4 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+            >
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <span className="inline-block px-4 py-1.5 bg-[#ec547c]/10 text-[#ec547c] rounded-full text-sm font-semibold mb-4">
+                    {t('testimonials.badge')}
+                  </span>
+                  <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    {t('testimonials.title')}
+                  </h2>
+                </div>
+
+                {/* Testimonial Cards */}
+                <div className="grid md:grid-cols-3 gap-6">
+                  {testimonials.slice(0, 3).map((testimonial, idx) => (
+                    <div
+                      key={idx}
+                      className={`bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${idx === 1 ? 'md:-translate-y-4' : ''}`}
+                    >
+                      {/* Quote icon */}
+                      <div className="text-5xl mb-4 opacity-20 gradient-text">"</div>
+                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                        {testimonial.text}
+                      </p>
+                      <div className="flex items-center gap-3">
+                        <div className="text-3xl">{testimonial.avatar}</div>
+                        <div>
+                          <p className="font-bold text-gray-900">{testimonial.user}</p>
+                          <p className="text-sm text-gray-500">{testimonial.location}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Trust Badges */}
+                <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
+                  <div className="flex items-center gap-2 text-gray-500">
+                    <Check className="w-5 h-5 text-green-500" />
+                    <span>{t('trust.secure')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-500">
+                    <Check className="w-5 h-5 text-green-500" />
+                    <span>{t('trust.privacy')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-500">
+                    <Check className="w-5 h-5 text-green-500" />
+                    <span>{t('trust.free')}</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
+
         {/* Features Section */}
         {(() => {
           const { ref, visible } = useScrollFadeIn();
@@ -362,9 +426,6 @@ export default function Home() {
           );
         })()}
 
-        {/* App Screenshots Showcase */}
-        <AppShowcase />
-
         {/* How It Works Section */}
         {(() => {
           const { ref, visible } = useScrollFadeIn();
@@ -410,67 +471,6 @@ export default function Home() {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        })()}
-
-        {/* Social Proof / Testimonials */}
-        {(() => {
-          const { ref, visible } = useScrollFadeIn();
-          return (
-            <section
-              ref={ref}
-              className={`py-24 lg:py-32 px-4 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-            >
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                  <span className="inline-block px-4 py-1.5 bg-[#ec547c]/10 text-[#ec547c] rounded-full text-sm font-semibold mb-4">
-                    {t('testimonials.badge')}
-                  </span>
-                  <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-                    {t('testimonials.title')}
-                  </h2>
-                </div>
-
-                {/* Testimonial Cards */}
-                <div className="grid md:grid-cols-3 gap-6">
-                  {testimonials.slice(0, 3).map((testimonial, idx) => (
-                    <div
-                      key={idx}
-                      className={`bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${idx === 1 ? 'md:-translate-y-4' : ''}`}
-                    >
-                      {/* Quote icon */}
-                      <div className="text-5xl mb-4 opacity-20 gradient-text">"</div>
-                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                        {testimonial.text}
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="text-3xl">{testimonial.avatar}</div>
-                        <div>
-                          <p className="font-bold text-gray-900">{testimonial.user}</p>
-                          <p className="text-sm text-gray-500">{testimonial.location}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Trust Badges */}
-                <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Check className="w-5 h-5 text-green-500" />
-                    <span>{t('trust.secure')}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Check className="w-5 h-5 text-green-500" />
-                    <span>{t('trust.privacy')}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Check className="w-5 h-5 text-green-500" />
-                    <span>{t('trust.free')}</span>
                   </div>
                 </div>
               </div>
