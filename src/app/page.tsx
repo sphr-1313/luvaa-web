@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Footer from "../components/Footer";
+import AppShowcase from "../components/AppShowcase";
 import { useI18n } from "../components/I18nProvider";
 import {
   Star,
@@ -319,8 +320,8 @@ export default function Home() {
                         key={idx}
                         onMouseEnter={() => setActiveFeature(idx)}
                         className={`feature-card relative p-8 rounded-3xl cursor-pointer overflow-hidden transition-all duration-500 ${isActive
-                            ? 'bg-white shadow-2xl scale-[1.02]'
-                            : 'bg-white/50 hover:bg-white hover:shadow-xl'
+                          ? 'bg-white shadow-2xl scale-[1.02]'
+                          : 'bg-white/50 hover:bg-white hover:shadow-xl'
                           }`}
                       >
                         {/* Background gradient */}
@@ -360,6 +361,9 @@ export default function Home() {
             </section>
           );
         })()}
+
+        {/* App Screenshots Showcase */}
+        <AppShowcase />
 
         {/* How It Works Section */}
         {(() => {
