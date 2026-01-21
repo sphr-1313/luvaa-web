@@ -475,6 +475,10 @@
     pointer-events: none;
   }
 
+  .invisible {
+    visibility: hidden;
+  }
+
   .visible {
     visibility: visible;
   }
@@ -501,6 +505,10 @@
 
   .inset-0 {
     inset: calc(var(--spacing) * 0);
+  }
+
+  .inset-x-0 {
+    inset-inline: calc(var(--spacing) * 0);
   }
 
   .-top-4 {
@@ -657,6 +665,10 @@
 
   .z-50 {
     z-index: 50;
+  }
+
+  .z-\[60\] {
+    z-index: 60;
   }
 
   .col-start-2 {
@@ -893,6 +905,10 @@
 
   .h-96 {
     height: calc(var(--spacing) * 96);
+  }
+
+  .h-\[72px\] {
+    height: 72px;
   }
 
   .h-\[400px\] {
@@ -2160,6 +2176,10 @@
 
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
+  }
+
+  .pt-\[72px\] {
+    padding-top: 72px;
   }
 
   .pl-6 {

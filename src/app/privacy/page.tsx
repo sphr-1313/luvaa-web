@@ -55,8 +55,8 @@ export default function PrivacyPage() {
                 <p className="leading-relaxed">Including managing your digital closet and synchronizing your data across devices using Supabase.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">AI Processing:</h3>
-                <p className="leading-relaxed">When you use the "Studio" feature, photos of your clothing are processed by third-party AI providers (such as Fashn.ai or Pixelcut) to generate outfit visualizations.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Smart Processing:</h3>
+                <p className="leading-relaxed">When you use the "Studio" feature, photos of your clothing are processed by third-party technology providers (such as Fashn.ai or Pixelcut) to generate outfit visualizations.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Communication:</h3>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
             <div className="pl-11">
               <p className="mb-4 leading-relaxed">We do not sell your personal data. We share information only with:</p>
               <ul className="list-disc space-y-2 ml-4">
-                <li><strong>Service Providers:</strong> Supabase (Database/Auth), Firebase (Analytics/Cloud Functions), RevenueCat (Subscriptions), and AI processing partners.</li>
+                <li><strong>Service Providers:</strong> Supabase (Database/Auth), Firebase (Analytics/Cloud Functions), RevenueCat (Subscriptions), and processing partners.</li>
                 <li><strong>Legal Requirements:</strong> If required by law or to protect our rights.</li>
               </ul>
             </div>

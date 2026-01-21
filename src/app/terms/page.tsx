@@ -45,7 +45,7 @@ export default function TermsPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">License to Luvaa:</h3>
-                <p className="leading-relaxed">By uploading content, you grant Luvaa a worldwide, non-exclusive, royalty-free license to use, host, and process your photos solely for the purpose of providing the App's features (such as AI background removal and outfit generation).</p>
+                <p className="leading-relaxed">By uploading content, you grant Luvaa a worldwide, non-exclusive, royalty-free license to use, host, and process your photos solely for the purpose of providing the App's features (such as automated background removal and outfit generation).</p>
               </div>
             </div>
           </section>
@@ -68,7 +68,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
               <span className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm">4</span>
-              AI Disclaimer
+              Technology Disclaimer
             </h2>
             <div className="pl-11">
               <p className="leading-relaxed text-gray-700 bg-blue-50/50 p-4 rounded-lg border border-blue-100">The "Studio" feature utilizes Artificial Intelligence to generate visualizations. While we strive for realism, Luvaa does not guarantee 100% accuracy of colors, fit, or textures. Generated images are for visualization and inspiration purposes only.</p>
@@ -82,7 +82,7 @@ export default function TermsPage() {
             </h2>
             <div className="pl-11">
               <ul className="list-disc space-y-2 ml-4">
-                <li>Certain features may require a paid subscription or "AI Credits."</li>
+                <li>Certain features may require a paid subscription or "Credits."</li>
                 <li>Payments are processed via Apple App Store or Google Play Store.</li>
                 <li>Refunds are subject to the terms of the respective App Store.</li>
               </ul>

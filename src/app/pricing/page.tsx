@@ -278,7 +278,7 @@ export default function PricingPage() {
                     : 'bg-gray-100 text-gray-900'
                     }`}>
                     <Sparkles className="w-4 h-4" />
-                    <span className="font-bold">{pack.credits} AI Credits</span>
+                    <span className="font-bold">{pack.credits} Credits</span>
                   </div>
 
                   {/* Savings */}

@@ -23,7 +23,7 @@ export default function Footer() {
                 <img src="/luvaa-icon.svg" alt="Luvaa" className="h-12 brightness-0 invert" />
               </a>
               <p className="text-gray-400 text-lg leading-relaxed max-w-sm mb-8">
-                Your AI-powered fashion companion. Rate outfits, discover your style, and dress with confidence.
+                Your personal fashion companion. Rate outfits, discover your style, and dress with confidence.
               </p>
 
               {/* App Download Buttons */}
