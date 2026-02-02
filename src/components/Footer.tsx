@@ -40,7 +40,7 @@ export default function Footer() {
                   <span className="text-sm font-medium">App Store</span>
                 </a>
                 <a
-                  href="https://play.google.com/store"
+                  href="https://play.google.com/store/apps/details?id=com.luvaa.luvaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-xl transition-all duration-200"
